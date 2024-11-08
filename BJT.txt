@@ -1,0 +1,467 @@
+1.	1 transistor tiếp xúc lưỡng cực có cấu trúc gồm 3 tiếp xúc PN. Phát biểu này đúng hay sai
+A. True
+B. False
+B
+2.	Tiếp xúc PN có sự tham gia của miền base và miền emitter được gọi là tiếp xúc Base-Emitter. Phát biểu này đúng hay sai
+A. True
+B. False
+A
+3.	Trong BJT, hạt dẫn đa số trong miền emitter là hạt dẫn đa số trong miền base
+A. True
+B. False 
+B
+4.	Đường tải tĩnh hay đường tải một chiều là 1 đường thẳng biểu diễn sự phụ thuộc giữa điện áp và dòng điện của BJT trong vùng bão hòa. Phát biểu này đúng hay sai
+A.	Đúng
+B.	Sai 
+B
+5.	Trong cùng 1 mạch điện, dòng collector (Ic) là lớn nhất khi BJT bão hòa. Phát biểu này đúng hay sai
+A.	Đúng
+B.	Sai 
+A
+6.	Một BJT hoạt động ở chế độ khuếch đại, có thể coi βdc xấp xỉ βac xấp xỉ β. Phát biểu này đúng hay sai
+A.	Đúng
+B.	Sai
+B
+7.	Dòng điện base (Ib) của BJT rất nhỏ so với dòng điện collector (Ic) và dòng điện emitter (Ie). Phát biểu này đúng hay sai
+A.	Đúng
+B.	Sai
+A
+8.	BJT làm việc ở chế độ cắt dòng khi tiếp xúc base-emitter phân cực thuận. Phát biểu này đúng hay sai
+A.	Đúng
+B.	Sai
+B
+9.	Hệ số khuếch đại có giá trị bằng điện áp đầu ra chia cho dòng điện đầu vào. Phát biểu này đúng hay sai
+A.	Đúng
+B.	Sai 
+B
+10.	 Thuật ngữ bipolar liên quan tới việc dùng cả lỗ trống và điện tử như các hạt mang điện trong cấu trúc BJT. Phát biểu này đúng hay sai
+A.	Đúng
+B.	Sai 
+A
+11.	Chức năng chính của BJT là tạo dao động. Phát biểu này đúng hay sai
+A.	Đúng
+B.	Sai 
+B
+12.	Hệ số β của BJT là
+A. Hệ số khuếch đại dòng điện
+B. Hệ số truyền đại dòng điện base
+C. Tỉ số của dòng điện collector với dòng emitter
+D. Hệ số khuếch đại công suất
+A
+13.	Có mấy phương pháp phân cực BJT
+A. 2
+B. 3
+C. 4
+D. 1
+C
+14.	Về mặt lý thuyết, nếu tăng Uce trong khi Ube của BJT được giữ nguyên thì
+A. Dòng điện base giảm nhẹ do tỷ lệ hạt dẫn tái hợp tại miền base giảm
+B. Dòng điện base không đổi
+C. Dòng điện base tăng nhẹ do tỷ lệ hạt dẫn tái hợp tại miền base tang
+D. Dòng điện base tăng tỷ thuận với độ tăng của Uce
+A
+15.	Trong một BJT loại NPN, các miền được tạo nên từ bán dẫn loại N là
+A. Base và emitter
+B. Base và collector
+C. Emitter và collector
+D. Base
+C
+16.	Thông thường, đặc điểm miền emitter của 1 BJT là
+A. Có kích thước lớn nhất, được pha tạp chất mạnh nhất
+B. Có kích thước trung bình, được pha tạp chất mạnh nhất
+C. Có kích thước lớn nhất, được pha tạp chất trung bình
+D. Có kích thước trung bình, được pha tạp chất ít nhất
+B
+17.	Đặc điểm miền base của 1 BJT thông thường là
+A. Có kích thước lớn nhất và được pha tạp chất mạnh nhất
+B. Mỏng nhất và có nồng độ pha tạp trung bình
+C. Mỏng nhất và có nồng độ pha nhẹ nhất
+D. Mỏng nhất và được pha tạp chất mạnh nhất
+C
+18.	 Đặc điểm miền collector của 1 BJT thông thường là
+A. Có kích thước lớn nhất, được pha tạp chất mạnh nhất
+B. Có kích thước lớn nhất, được pha tạp chất ít nhất
+C. Có kích thước lớn nhất, được pha tạp chất trung bình
+D. Có kích thước trung bình, được pha tạp chất mạnh nhất
+C
+19.	 Dòng điện emitter của 1 BJT được tạo ra là do
+A. Tiếp xúc Emitter-base của nó phân cực thuận, các hạt dẫn đa số từ miền E khuếch tán sang miền B rồi phần lớn chuyển sang C
+B. Tiếp xúc Emitter-base của nó phân cực ngược và các hạt dẫn đa số từ miền E khuếch tán sang miền B rồi phần nhỏ chuyển sang C
+C. Tiếp xúc Emitter-base của nó phân cực thuận và các hạt dẫn thiểu số từ miền E khuếch tán sang B và C
+D. Tiếp xúc Emitter-base của nó phân cực ngược và các hạt dẫn thiểu số từ miền E khuếch tán sang B và C
+A
+20.	 Khi đang hoạt động, dòng điện base của BJT được tạo ra là do
+A. Số lượng lớn các hạt dẫn đa số từ miền B khuếch tán sang miền E
+B. Các hạt dẫn đa số từ miền E khuếch tán sang B, tất cả hạt dẫn này tái hợp với các hạt dẫn đa số tại B
+C. Các hạt dẫn đa số từ miền E khuếch tán sang B, một lượng nhỏ hạt dẫn này tái hợp với các hạt dẫn đa số tại B
+D. Số lượng lớn các hạt dẫn đa số từ miền B khuếch tán sang miền E và tái hợp với các hạt đa số tại miền E
+C
+21.	 Dòng điện collector của 1 BJT được tạo ra là do
+A. Tiếp xúc collector-base của nó phân cực ngược và các hạt dẫn đa số từ miền B bị hút sang miền C
+B. Tiếp xúc collector-base của nó phân cực ngược và các hạt dẫn thiểu số từ miền B bị hút sang miền C
+C. Tiếp xúc collector-base của nó phân cực ngược và các hạt dẫn thiểu số từ miền C khuếch tán sang miền B
+D. Tiếp xúc collector-base của nó phân cực ngược và các hạt dẫn đa số từ miền C khuếch tán sang miền B
+B
+22.	 Thông thường, điện áp giữa cực base và emitter của BJT khi tiếp giáp này được phân cực thuận có giá trị xấp xỉ
+A. 0.3V
+B. 0.7V
+C. 0.3V hoặc 0.7V tùy thuộc vào vật liệu là Ge hay Si
+D. 0.3V và 0.7V
+C
+23.	Khi tiếp xúc emitter-base của BJT phân cực thuận, độ rộng vùng nghèo hạt dẫn của tiếp xúc này sẽ
+A. Tăng lên
+B. Giảm đi
+C. Không đổi
+D. Ban đầu không đổi sau đó tăng lên
+B
+24.	Để một BJT loại NPN làm việc ở chế độ khuếch đại, điện thế cực base phải
+A. Cao hơn cực emitter
+B. Thấp hơn cực emitter
+C. Cao hơn cực collector
+D. Thấp hơn cực emitter và cao hơn cực collector
+A
+25.	Để một BJT loại PNP làm việc ở chế độ khuếch đại, điện thế cực base phải
+A. Cao hơn cực emitter
+B. Thấp hơn cực emitter
+C. Thấp hơn cực collector
+D. Cao hơn cực emitter và thấp hơn cực collector
+B
+26.	 Thông tin nào sau đây thể hiện BJT loại NPN làm việc ở chế độ khuếch đại
+A. Điện áp ở cực E lớn hơn điện áp ở cực C và nhỏ hơn điện áp ở cực B
+B. Điện áp ở cực E lớn hơn điện áp ở cực C và cực B
+C. Điện áp ở cực E nhỏ hơn điện áp ở cực C và cực B
+D. Điện áp ở cực E nhỏ hơn điện áp ở cực C và lớn hơn điện áp ở cực B
+C
+27.	 Đối với BJT loại NPN, thông tin nào sau đây thể hiện nó làm việc ở chế độ khuếch đại
+A. Điện áp ở cực C lớn hơn điện áp ở cực B và điện áp ở cực E 
+B. Điện áp ở cực C lớn hơn điện áp ở cực B và nhỏ hơn điện áp ở cực E
+C. Điện áp ở cực C nhỏ hơn điện áp ở cực B và lớn hơn điện áp ở cực E
+D. Điện áp ở cực C nhỏ hơn điện áp ở cực B và E
+A
+28.	 Khi 1 BJT đang hoạt động trong vùng khuếch đại, giá trị của dòng điện ở cực emitter luôn
+A. Lớn hơn giá trị dòng điện ở cực base
+B. Nhỏ hơn giá trị dòng điện ở collector
+C. Lớn hơn giá trị dòng điện ở collector
+D. Lớn hơn giá trị dòng điện ở cực base và giá trị dòng điện ở collector
+D
+29.	 Khi 1 BJT đang hoạt động trong vùng khuếch đại, giá trị của dòng điện ở cực collector luôn
+A. Lớn hơn giá trị dòng điện ở cực base
+B. Bằng giá trị dòng điện ở emitter
+C. Lớn hơn giá trị dòng điện ở cực base và  nhỏ hơn giá trị dòng điện ở emitter
+D. Lớn hơn giá trị dòng điện ở cực emitter
+C
+30.	Trong BJT, hệ số α là
+A. Hệ số khuếch đại dòng điện
+B. Tỉ số của dòng điện collector với dòng điện emitter
+C. Hệ số khuếch đại công suất
+D. Tỉ số của dòng điện collector với dòng điện base
+C
+31.	 Điện áp trên tiếp xúc BE của BJT loại Si khi phân cực thuận là
+A. 0V
+B. 0.7V
+C. 0.3V
+D. Vbb
+B
+32.	 Đối với 1 BJT, nếu dòng điện collector bằng 0.95 lần dòng điện emitter thì α bằng
+A. 0.05
+B. 20
+C. 0.95
+D. 1.05
+C
+33.	 Khi BJT hoạt động ở chế độ bão hòa, điện áp giữa cực C và cực E thường
+A. Nằm trong khoảng từ 0.3V đến điện áp của nguồn cung cấp
+B. Nhỏ và không quá 0.3V
+C. Bằng điện áp giữa cực B và E
+D. Xấp xỉ điện áp nguồn cung 
+B
+34.	 Có thể dùng đặc tuyến ra của BJT mắc theo mô hình E chung (CE) để giải thích cho đặc tuyến ra của nó mắc theo mô hình nào dưới đây
+A. B chung (CB)
+B. C chung (CC)
+C. C chung (CC) và B chung (CB)
+D. Các phương án nêu ra đều sai
+B
+35.	BJT có điểm làm việc tĩnh (một chiều) phụ thuộc vào nhiệt độ mạnh nhất khi được phân cực theo cách nào trong số sau đây
+A. Phân cực base
+B. Phân cực emitter
+C. Phân cực bằng phân áp
+D. Phân cực bằng hồi tiếp collector
+A
+36.	 Với 1 BJT tín hiệu nhỏ (small signal BJT), các điện trở re, rb và rc trong mô hình tương đương re thường có giá trị sắp xếp theo thứ tự tăng dần từ trái sang phải là
+A.	Re, rb, rc
+B.	Rb, re, rc
+C.	Rc, rb, re
+D.	Re, rc, rb
+B
+37.	1 BJT được làm từ silic, có β = 150, đang ở trong mạch điện như hình vẽ. Nếu 1 lí do nào đó mà β tăng lên, dòng collector sẽ
+ 
+A.	Tăng lên
+B.	Giảm đi
+C.	Không đổi
+D.	Không kết luận được
+A
+38.	Phương pháp phân cực cho BJT trong hình là  
+A.	Phân áp
+B.	Phân cực base
+C.	Phân cực emitter
+D.	Phân cực hồi tiếp emitter
+B
+39.	Một BJT được làm từ silic đang ở trong mạch điện như hình vẽ. Nếu 1 lí do nào đó mà β tăng lên, dòng base sẽ 
+ 
+A.	Giảm đi
+B.	Tăng lên
+C.	Không đổi
+D.	Ban đầu không đổi, sau đó giảm mạnh
+C
+40.	BJT trong hình vẽ được làm từ silic. Nếu Vcc tăng lên gấp đôi, dòng điện base sẽ 
+ 
+A.	Giảm đi một nửa
+B.	Tăng lên gấp đôi
+C.	Gần như không đổi
+D.	Ban đầu tăng lên, sau đó giảm đi
+C
+41.	BJT trong hình vẽ được chế tạo từ silic. Biết Vcc = 10V, Rc = 1kOhm, Uin = 0V. Tính Uout 
+ 
+A.	0V
+B.	10V
+C.	0.3V
+D.	9V
+A
+42.	BJT trong hình vẽ đang làm việc ở chế độ khuếch đại. Biết re = 50 Ohm, Rc = 1kOhm, và biên độ thành phần tín hiệu xoay chiều tại cực B là Vb = 100mV, tính biên độ điện áp xoay chiều tại cực C (là Vout trong hình)  
+A.	0V
+B.	2V
+C.	4.76V
+D.	6.71V 
+B
+43.	Tham số nào trong số sau đây liên quan đến việc tính hệ số ổn định của BJT khi đang hoạt động
+A.	α
+B.	Ib
+C.	Ube
+D.	Uce *NOTE: tham số ổn định dựa trên: Ube, Ic0 và β
+C
+44.	 Một BJT đang hoạt động ở chế độ khuếch đại. Khi nhiệt độ BJT tăng hoặc giảm, tham số bị thay đổi là
+A. β
+B. Ube
+C. Ic
+D. Cả 3
+C
+45.	 Một BJT đang hoạt động ở chế độ khuếch đại. Khi nhiệt độ tăng thì tham số nào giảm
+A. β
+B. Ube
+C. Ic
+D. β và Ic
+B
+46.	 Một BJT đang hoạt động ở chế độ khuếch đại. Khi nhiệt độ tăng thì tham số nào tăng
+A. Ic
+B. Ube
+C. Ib
+D. Ube và Ib
+A
+47.	Đối với BJT làm việc ở chế độ khuếch đại, điều kiện cần để điểm làm việc tĩnh (1 chiều) của nó nằm ở giữa đường tái tĩnh (1 chiều) là
+A. Giá trị 1 chiều của Uce đạt cực đại và Ic = Icmax/2
+B. Giá trị 1 chiều của Uce bằng 1 nửa giá trị điện áp nguồn cung cấp và Ic = Icmax
+C. Các phương án đưa ra đều sai
+D. Gía trị 1 chiều của Uce bằng 1 nửa giá trị điện áp nguồn cung và Ic = Icmax/2
+D
+48.	1 BJT chế tạo từ silic được phân cực bằng mạch điện có thông số như trong hình. Nếu điều chỉnh R1 để dòng điện collector tăng lên thì điện áp chênh lệch giữa hai cực C và E sẽ 
+ 
+A.	Không đổi
+B.	Tăng lên
+C.	Giảm đi
+D.	Không kết luận được
+C
+49.	BJT trong hình vẽ được chế tạo từ silic. Biết Vcc = 9V, Vbb = 3.5V, Rc = 1k Ohm, Rb = 200k Ohm và β = 100. Điện áp giữa cực C và cực E của BJT là xấp xỉ 
+ 
+A.	0V
+B.	9V
+C.	7.6V
+D.	4.85V
+C
+50.	BJT trong hình vẽ được chế tạo từ silic. Biết Vcc = Vbb = 10V, Rc = 1.5k Ohm, Rb = 470k Ohm và β = 180. Điện áp 2 đầu điện trở Rc là xấp xỉ  
+A.	0V
+B.	10V
+C.	5.3V
+D.	4.7V
+C
+51.	BJT trong hình vẽ được chế tạo từ silic. Biết Vcc = 10V, Rc = 1k Ohm, và Uin = 5V. Để tạo ra dòng Ib không nhỏ hơn 50µA, điện trở Rb không được lớn hơn 
+ 
+A.	100k Ohm
+B.	88k Ohm
+C.	50k Ohm
+D.	94k Ohm
+B
+52.	BJT trong hình vẽ được cấu tạo từ silic. Biết Vcc = 10V, Rc = 1k Ohm và Uin = 5V. Trong thực tế, dòng điện collector bão hòa của BJT là  
+A.	Khoảng 9.7mA
+B.	Xấp xỉ 0mA
+C.	Đúng bằng 10mA
+D.	Khoảng 100mA
+A
+53.	BJT trong hình vẽ đang làm việc ở chế độ bão hòa. Nếu dòng điện base tăng lên, dòng collector sẽ
+ 
+A.	Giảm đi
+B.	Tăng lên
+C.	Gần như không đổi
+D.	Ban đầu tăng lên, sau đó giảm đi
+C
+54.	BJT trong hình vẽ được cấu tạo từ silic. Biết Vcc = 10V, Rc = 1k Ohm và Uin = 5V. Nếu giảm giá trị của điện trở Rc thì giá trị của dòng collector cực đại sẽ
+ 
+A.	Không đổi
+B.	Giảm đi
+C.	Tăng lên
+D.	Không kết luận được
+C
+55.	 Mạch khuếch đại dùng BJT mắc theo mô hình C chung có đặc điểm
+A. Hệ số khuếch đại điện áp xấp xỉ 1 và hệ số khuếch đại dòng điện xấp xỉ β
+B. Hệ số khuếch đại điện áp xấp xỉ β và hệ số khuếch đại dòng điện xấp xỉ 1
+C. Hệ số khuếch đại điện áp lớn hơn 1 và hệ số khuếch đại dòng điện lớn hơn β
+D. Hệ số khuếch đại điện áp xấp xỉ β và hệ số khuếch đại dòng điện lớn hơn 1
+A
+56.	Về mặt lý thuyết, nếu tăng Uce trong khi Ube của BJT được giữ nguyên thì
+A. Dòng điện base giảm nhẹ do tỷ lệ hạt dẫn tái hợp tại miền base giảm
+B. Dòng điện base tăng nhẹ do tỷ lệ hạt dẫn tái hợp tại miền base tăng
+C. Dòng điện base không đổi
+D. Dòng điện base tăng tỷ lệ thuận với độ tăng của Uce
+A
+57.	Một BJT đang làm việc ở chế độ khuếch đại và được phân cực theo kiểu hồi tiếp emitter bởi các điện trở Rb, Rc và Re nối tới các cực tương ứng. Một trong những giải pháp để tăng độ ổn định của điểm làm việc tĩnh (1 chiều) là
+A. Giảm giá trị điện trở Re
+B. Tăng giá trị điện trở Re
+C. Mắc nối tiếp với Re 1 tụ điện
+D. Mắc song song với Re 1 tụ điện
+B
+58.	BJT trong hình vẽ được làm từ silic. Nếu Vbb tăng lên, dòng điện collector sẽ
+ 
+A.	Giảm đi
+B.	Tăng lên
+C.	Gần như không đổi
+D.	Ban đầu không đổi, sau đó tăng lên
+C
+59.	1 BJT chế tạo từ silic được phân cực bằng mạch điện có thông số như trong hình. Nếu giảm giá trị của β xuống còn 100, dòng collector sẽ
+ 
+A.	Gần như không đổi
+B.	Tăng lên
+C.	Giảm đi
+D.	Không kết luận được
+A
+60.	1 BJT chế tạo từ silic được phân cực bằng mạch điện có thông số như trong hình. Nếu tăng điện áp nguồn cung lên, điện áp tại cực E của BJT sẽ
+ 
+A.	Gần như không đổi
+B.	Giảm đi
+C.	Tăng lên
+D.	Ban đầu không đổi, sau đó giảm dần
+C
+61.	Một BJT chế tạo từ silic được phân cực bằng mạch điện có thông số như hình. Giá trị dòng emitter xấp xỉ
+ 
+A.	0.28mA
+B.	2.8mA
+C.	0.28A
+D.	28A *cách tính: dung Thevenin 
+B
+62.	Một BJT silic được phân cực bằng mạch như hình. Nếu tăng R2 lên, điện áp trên cực B của BJT sẽ
+ 
+A.	Tăng lên
+B.	Giảm đi
+C.	Không đổi
+D.	Không kết luận được
+A
+63.	Khi BJT làm việc trong vùng khuếch đại tuyến tính, phương trình nào trong số sau đây đúng
+A. Ic = β x Ib
+B. Ic = β x Ic
+C. Ib = β x Ic
+D. Ib = β x Ie
+A
+64.	Khi đang hoạt động, một BJT có Ie = 10mA và Ic = 9.95mA. Ib có giá trị
+A. 1mA
+B. 19.95mA
+C. 0.5 mA
+D. 0.05mA
+D
+65.	 Để một BJT làm việc ở chế độ khuếch đại tín hiệu biên độ nhỏ thì
+A. Tiếp xúc giữa các cực E-B phân cực thuận, tiếp xúc giữa các cực C-B phân cực thuận
+B. Tiếp xúc giữa các cực E-B phân cực thuận, tiếp xúc giữa các cực C-B phân cực ngược
+C. Tiếp xúc giữa các cực E-B phân cực ngược, tiếp xúc giữa các cực C-B phân cực ngược
+D. Sai hết
+B
+66.	Mạch khuếch đại E chung có khả năng và đặc điểm là 
+A. Khuếch đại dòng điện, khuếch đại điện áp, điện áp ra ngược pha với điện áp vào
+B. Khuếch đại dòng điện, khuếch đại điện áp, điện áp ra cùng pha với điện áp vào
+C. Khuếch đại dòng điện,  không khuếch đại điện áp, điện áp ra cùng pha với điện áp vào
+D. Không khuếch đại dòng điện, khuếch đại điện áp, điện áp ra cùng pha với điện áp vào
+A
+67.	 Khi đo điện áp giữa các chân của BJT trong 1 mạch phân cực, người ta tu được các giá trị là Ube = 0V và Ucb = Uce = Ec, với Ec là điện áp nguồn cung cấp cho BJT. Kết luận nào có lý nhất
+A. BJT đang được phân cực ở chế độ khuếch đại
+B. BJT đang được phân cực ở chế độ bão hòa
+C. BJT đang được phân cực ở chế độ cắt dòng
+D. BJT bị hỏng
+C
+68.	 Trong BJT loại PNP, hạt dẫn đa số cực base là
+A. Cả điện trở tự do và lỗ trống
+B. Các lỗ trống
+C. Các điện tử tự do
+D. Sai hết
+C
+69.	Khi 1 BJT loại PNP làm việc ở chế độ khuếch đại, điện áp của các cực xếp theo thứ tự giảm dần từ trái qua phải là
+A.	Ub, Uc, Ue
+B.	Uc, Ub, Ue
+C.	Ue, Uc, Ub
+D.	Ue, Ub, Uc
+D
+70.	Khi 1 BJT loại PNP làm việc ở chế độ khuếch đại, điện áp của các cực xếp theo thứ tự tăng dần từ trái qua phải là
+A.	Ub, Uc, Ue
+B.	Uc, Ub, Ue
+C.	Ue, Uc, Ub
+D.	Ue, Ub, Uc
+B
+71.	Khi 1 BJT loại NPN làm việc ở chế độ khuếch đại, điện áp của các cực xếp theo thứ tự tăng dần từ trái qua phải là
+A.	Ub, Uc, Ue
+B.	Uc, Ub, Ue
+C.	Ue, Uc, Ub
+D.	Ue, Ub, Uc
+D
+72.	Khi 1 BJT loại NPN làm việc ở chế độ khuếch đại, điện áp của các cực xếp theo thứ tự giảm dần từ trái qua phải là
+A. Ub, Uc, Ue
+B. Uc, Ub, Ue
+C. Ue, Uc, Ub
+D. Ue, Ub, Uc
+B
+73.	Khi một BJT loại PNP được chế tạo từ Ge làm việc trong vùng khuếch đại, điện áp của cực B so với cực E (Ube) xấp xỉ
+A. -0.3V
+B. 0.3V
+C. 0.7V
+D. -0.7V
+B
+74.	BJT làm việc ở chế độ chuyển mạch khi hai tiếp giáp Je và Jc ở trạng thái tương ứng là
+A. Cùng thuận
+B. Cùng ngược
+C. Thuận – ngược
+D. Ngược – thuận
+E. Cùng thuận hoặc cùng ngược
+E
+75.	Khi đang hoạt động, 1 BJT có β = 125, Ib = 30 µA. Tính Ic
+A. 37.5mA
+B. 3.75A
+C. 375µA
+D. 3.75mA
+D
+76.	Đặc tuyến ra của BJT mắc theo sơ đồ C chung (CC) là đồ thị của
+A. Dòng điện base theo điện áp collector-emitter
+B. Dòng điện collector theo điện áp base-emitter
+C. Dòng điện collector theo điện áp collector-emitter
+D. Dòng điện emitter theo điện áp collector-emitter
+D
+77.	Khi đo điện áp chênh lệch giữa các chân của BJT trong một mạch phân cực, người ta thu được các giá trị là Ucb = Uce = Ueb = 0V. Nếu cả Ib và Ic đều khác 0, kết luận nào có lý
+A. BJT đang được phân cực ở chế độ khuếch đại 
+B. BJT đang được phân cực ở chế độ bão hòa
+C. BJT đang được phân cực ở chế độ cắt dòng (ngưng dẫn)
+D. BJT bị hỏng
+D
+78.	Mối quan hệ giữa dòng Ib, Ic, Ie trong BJT là
+A.	Ie = Ib + Ic
+B.	Ic = Ib + Ie
+C.	Ib = Ic + Ie
+D.	Ib = Ic + Ie
+A
+79.	Khi đang hoạt động, một BJT có Ic = 5mA và Ib = 20µA. hệ số khuếch đại dòng 1 chiều β có giá trị bằng
+A.	250
+B.	100
+C.	25
+D.	4
+A

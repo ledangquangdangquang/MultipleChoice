@@ -1,7 +1,13 @@
 import os
 import random
 
+directory = "."  # Đường dẫn đến thư mục, "." là thư mục hiện tại
+
+# List of .txt file 
+filenames = [os.path.join(directory, file) for file in os.listdir(directory) if file.endswith(".txt")]
+
 def read_questions_from_file(filename):
+    """Read questions from a file and return as a list of dictionaries"""
     with open(filename, 'r', encoding='utf-8') as file:
         lines = file.readlines()
 
@@ -11,72 +17,102 @@ def read_questions_from_file(filename):
     for line in lines:
         line = line.strip()
         
-        # Bỏ qua dòng trống
+        # Skip empty lines
         if not line:
             continue
         
-        if line[0].isdigit():  # Nhận diện câu hỏi bắt đầu bằng số
+        # Identify questions starting with a number
+        if line[0].isdigit():  
             if "question" in current_question and "answer" in current_question:
                 questions.append(current_question)
             current_question = {"question": line}
         elif line.startswith(("A.", "B.", "C.", "D.", "E.")):
-            if "options" not in current_question:
-                current_question["options"] = []
-            current_question["options"].append(line)
-        elif line.isalpha() and len(line) == 1:  # Đáp án đơn lẻ
+            current_question.setdefault("options", []).append(line)
+        elif line.isalpha() and len(line) == 1:  # Single letter answer
             current_question["answer"] = line
 
+    # Add the last question if it's complete
     if "question" in current_question and "answer" in current_question:
         questions.append(current_question)
 
     return questions
 
-def quiz_user(questions):
+def quiz_user(questions, is_retry=False):
+    """Run a quiz for the user and save wrong answers for a retry"""
     correct = 0
+    wrong_questions = []
 
     for question in questions:
-        # Clear màn hình trước khi hiện câu hỏi
         clear_screen()
-
         print(question["question"])
         for option in question["options"]:
             print(option)
         
-        # Lấy đáp án từ người dùng và kiểm tra tính hợp lệ
+        # Get answer from the user
         user_answer = ""
         while user_answer not in ["A", "B", "C", "D", "E"]:
-            user_answer = input("\nNhập đáp án của bạn (A, B, C, D, E): ").strip().upper()
+            user_answer = input("\nEnter your answer (A, B, C, D, E): ").strip().upper()
             if user_answer not in ["A", "B", "C", "D", "E"]:
-                print("Đáp án không hợp lệ, vui lòng nhập lại.")
+                print("Invalid answer, please try again.")
         
-        # Kiểm tra kết quả
+        # Check the answer
         if user_answer == question["answer"]:
-            print("Chính xác!")
+            print("Correct!")
             correct += 1
         else:
-            print(f"Sai! Đáp án đúng là: {question['answer']}")
-        
-        # Đợi một chút trước khi chuyển câu hỏi
-        input("\nNhấn Enter để tiếp tục...")
+            print(f"Incorrect! The correct answer is: {question['answer']}")
+            if not is_retry:  # Only add incorrect answers if it's not a retry
+                wrong_questions.append(question)  
+
+
+        input("\nPress Enter to continue...")
 
     clear_screen()
-    print(f"Bạn đã trả lời đúng {correct}/{len(questions)} câu hỏi.")
-    print(f"Powered by ledangquangdangquang.")
+    print(f"You answered {correct}/{len(questions)} questions correctly.")
+    print("Author: ledangquangdangquang.")
+    
+    # If there are incorrect answers, allow a one-time retry
+    if wrong_questions and not is_retry:
+        print("\nNow you will retry the incorrect questions once.")
+        input("Press Enter to continue...")
+        quiz_user(wrong_questions, is_retry=True)  # Retry incorrect questions with is_retry=True
+
 
 def clear_screen():
-    # Clear màn hình
+    """Clear the screen depending on the operating system"""
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def main():
-    filename = "questions.txt"
-    questions = read_questions_from_file(filename)
+    """Run the main program in an infinite loop"""
+    while True:
+        clear_screen()
+        print("Choose a file you want to use: ")
+        for i, filename in enumerate(filenames):
+            print(f"{i + 1}. {os.path.basename(filename)}")
+        print("0. EXIT")
 
-    # Hỏi người dùng có muốn random câu hỏi không
-    shuffle_choice = input("Bạn có muốn random câu hỏi không? (y/n): ").strip().lower()
-    if shuffle_choice == 'y':
-        random.shuffle(questions)
+        # Get user's file selection
+        your_choice = input("Enter your choice: ").strip()
+        if your_choice == "0":
+            clear_screen()
+            print("Author: ledangquangdangquang.")
+            break
+        elif your_choice not in map(str, range(1, len(filenames) + 1)):
+            print("Invalid choice, please try again.")
+            input("Press Enter to continue...")
+            continue
 
-    quiz_user(questions)
+        clear_screen()
+        chosen_file = filenames[int(your_choice) - 1]
+        questions = read_questions_from_file(chosen_file)
+        print("You are using the file:", os.path.basename(chosen_file))
+
+        # Ask if the user wants to randomize questions
+        shuffle_choice = input("Do you want to randomize the questions? (y/n): ").strip().lower()
+        if shuffle_choice == 'y':
+            random.shuffle(questions)
+
+        quiz_user(questions)
 
 if __name__ == "__main__":
-    main()
+    main() 

@@ -1,0 +1,466 @@
+1. Trường từ tĩnh sinh ra bởi
+A. Dòng không đổi
+B. Dòng xoay chiều
+C. Điện tích đứng yên
+A
+2. Dòng dịch sinh ra điện trường xoáy.
+A. Đúng
+B. Sai
+B
+3. Trường điện từ biến thiên sinh ra bởi
+A. Dòng không đổi
+B. Dòng xoay chiều
+C. Điện tích đứng yên
+B
+4. Trong thủy tinh, trở kháng sóng luôn là số phức
+A. Đúng
+B. Sai
+A
+5. Sóng có phân cực TM truyền theo Ox
+A. Ex=0
+B. Hx=0
+C. Ez≠0
+D. Hy≠0
+E. B, C, D
+E
+6. Định lý nào sau đây sử dụng chuyển đổi từ tích phân mặt sang tích phân theo 1 thể tích:
+A. Định lý Gauss
+B. Định lý Stock
+C. Cả hai định lý Gauss và Stock
+A
+7. Điện trường biến thiên theo không gian sinh ra từ trường với đường sức kín.
+A. Đúng
+B. Sai
+B
+8. Cho biểu thức sóng như sau: E(t,x)=40exp(j3pi*10^8 t)exp(+jpi*x)i_y. Sóng này là sóng
+A. Suy hao
+B. Không suy hao
+C. Thuận
+B
+9. Cho sóng phẳng đơn sắc E=100sin(6π.10⁸t+2πx)i_y. Trong đó i_y là véc tơ đơn vị theo hướng oy. Sóng truyền trong
+A. Nước
+B. Không khí
+C. Thủy tinh
+B
+10. Định luật Gauss cho từ trường liên quan đến tích phân của trường véc tơ theo một đường cong kín
+A. Đúng
+B. Sai
+B
+11. Sóng điện từ có thể truyền trong môi trường có độ dẫn điện rất lớn
+A. Đúng
+B. Sai
+B
+12. Sóng chạy là sóng khúc xạ
+A. Đúng
+B. Sai
+A
+13. Trường tĩnh điện được sinh ra bởi dòng xoay chiều
+A. Đúng
+B. Sai
+B
+14. Trong không gian tự do, E và H là ngược pha.
+A. Đúng
+B. Sai
+B
+15. Trường tĩnh điện là một trường mang năng lượng và không biến thiên theo không gian.
+A. Đúng
+B. Sai
+B
+16. Dòng điện dịch là sự biến thiên của điện trường theo không gian.
+A. Đúng
+B. Sai
+B
+17. Dòng dẫn và dòng dịch đều sinh ra từ trường xoáy.
+A. Đúng
+B. Sai
+A
+18. Gradient của một hằng số là một véc tơ
+A. Đúng
+B. Sai
+B
+19. Trường tĩnh điện là một trường không mang năng lượng
+A. Đúng
+B. Sai
+B
+20. Sóng truyền trong điện môi có biên độ không thay đổi theo khoảng cách truyền
+A. Đúng
+B. Sai
+A
+21. Tính chất nào của sóng điện từ sau đây phụ thuộc vào môi trường mà nó truyền?
+A. Tần số
+B. Bước sóng
+C. Vận tốc
+C
+22. Py = Ez x Hx
+A. Đúng
+B. Sai
+A
+23. Cho sóng phẳng đơn sắc E=100sin(6π.10⁸t+2πx).exp(+πx). Hệ số pha là
+A. 6π (rad/m)
+B. 2π (rad/m)
+C. π (rad/m)
+B
+24. Trở kháng sóng của môi trường điện môi luôn là số thực và phụ thuộc tần số
+A. Đúng
+B. Sai
+B
+25. Đường sức của từ trường tĩnh là kín
+A. Đúng
+B. Sai
+A
+26. Hệ phương trình Maxwell là biểu thị mối quan hệ giữa điện trường và từ trường không biến thiên theo thời gian.
+A. Đúng
+B. Sai
+B
+27. Cho sóng phẳng đơn sắc E=100sin(6π.10⁸t+2πx).exp(+πx)i_y. Trong đó i_y là véc tơ đơn vị theo hướng oy. Hướng truyền sóng
+A. Chiều dương trục y
+B. Chiều âm trục x
+C. Chiều âm trục y
+D. Chiều dương trục x
+B
+28. Divergence của một véc tơ là một véc tơ
+A. Đúng
+B. Sai
+B
+29. Từ trường tĩnh là trường không mang năng lượng
+A. Đúng
+B. Sai
+B
+30. Véc tơ Poynting là véc tơ mật độ năng lượng của trường điện từ
+A. Đúng
+B. Sai
+A
+31. Trường điện từ biến thiên mang năng lượng và có đường sức hở
+A. Đúng
+B. Sai
+B
+32. Cho sóng phẳng đơn sắc E=100sin(6π.10⁸t+2πx).i_y. Trong đó i_y là véc tơ đơn vị theo hướng oy. Trở kháng sóng
+A. 377 (ohm)
+B. 120 (ohm)
+C. 100 (ohm)
+A
+33. Dòng dẫn biểu thị sự biến thiên của điện tích theo thời gian
+A. Đúng
+B. Sai
+A
+34. Khi mặt đồng biên và mặt đồng pha của sóng phẳng trùng nhau thì sóng phẳng là sóng phẳng đồng nhất
+A. Đúng
+B. Sai
+A
+35. Với trường điện từ biến thiên:
+A. dB/dt=0
+B. dD/dt≠0
+C. dB/dz≠0
+D. B, C
+D
+36. Từ trường tĩnh là trường có nguồn
+A. Đúng
+B. Sai
+B
+37. Cho sóng phẳng đơn sắc E=-100sin(6π.10⁸t+2πx).exp(+πx)i_y. Trong đó i_y là véc tơ đơn vị theo hướng oy. Hướng của véc tơ cường độ điện trường
+A. Chiều âm trục y
+B. Chiều dương trục y
+C. Chiều âm trục x
+D. Chiều dương trục x
+A
+38. Dòng điện dịch là dòng chuyển dời có hướng của các điện tích với vận tốc cố định.
+A. Đúng
+B. Sai
+B
+39. Cho sóng phẳng đơn sắc E=100sin(6π.10⁸t+2πx).exp(+πx). Hệ số suy hao là
+A. 6π (rad/m)
+B. 2π (rad/m)
+C. π (rad/m)
+C
+40. E(t,x)=40exp(j6pi*10^8 t)exp(j2pi*x)i_y. Sóng này là sóng
+A. Truyền trong không khí
+B. Thuận
+C. Suy hao
+A
+41. Cho biểu thức sóng như sau: E(t,x)=10exp(j3pi*10^8 t)exp(-jpi*x)i_y. Sóng này là sóng
+A. Chạy
+B. Đứng
+C. Nghịch
+A
+42. Sóng điện từ là sóng dọc
+A. Đúng
+B. Sai
+B
+43. Các đại lượng cơ bản của trường từ tĩnh sẽ luôn không đổi theo vị trí.
+A. Đúng
+B. Sai
+B
+44. Sóng điện từ phẳng đơn sắc có thể truyền trong thủy tinh.
+A. Đúng
+B. Sai
+A
+45. E(t,x)=-40exp(j6pi*10^8 t)exp(j2pi*x)i_y. Sóng này là sóng
+A. Truyền theo chiều âm trục x
+B. Đứng
+C. Không suy hao
+D. A, C
+D
+46. Trường tĩnh điện là một trường
+A. Có các đại lượng đặc trưng là véc tơ
+B. Mang năng lượng
+C. Có đường sức kín
+D. A, B
+D
+47. Sóng điện từ phẳng đơn sắc có mặt đẳng pha là mặt trụ
+A. Đúng
+B. Sai
+B
+48. Cho véc tơ A (1,1,1) và B (1,1,0). AxB=
+A. (-1,-1,0)
+B. (-1,1,0)
+C. (1,-1,0)
+D. (1,1,0)
+B
+49. Từ trường sinh ra trong không gian tự do là do sự biến thiên của điện trường theo thời gian.
+A. Đúng
+B. Sai
+A
+50. Véc tơ cường độ điện trường phụ thuộc vào môi trường khảo sát
+A. Đúng
+B. Sai
+A
+51. Sóng TEM truyền theo phương oy
+A. Ey=0
+B. Hy=0
+C. Ex=0
+D. Hx=0
+E. A, B 
+E
+52. Trường tĩnh điện là một trường có các đại lượng đặc trưng là véc tơ và không phụ thuộc vào thời gian
+A. Đúng
+B. Sai
+A
+53. Khi sóng truyền trong chân không, điện trường và từ trường vuông góc với nhau và song song với phương truyền sóng
+A. Đúng
+B. Sai
+B
+54. Sóng điện từ không thể truyền trong chân không.
+A. Đúng
+B. Sai
+B
+55. Cho véc tơ A và véc tơ B. AxB=BxA
+A. Đúng
+B. Sai
+B
+56. Cho sóng phẳng đơn sắc E=-10sin(6π.10⁸t+2πx).exp(+πx)i_z. Trong đó i_y là véc tơ đơn vị theo hướng oy. Hướng truyền sóng
+A. Chiều âm trục z
+B. Chiều dương trục z
+C. Chiều âm trục x
+D. Chiều dương trục x
+C
+57. E(t,x)=-40exp(j6pi*10^8 t)exp(-j2pi*x)i_y. Sóng này là sóng 
+A. Biên độ không đổi
+B. Nghịch
+C. Đứng
+A
+58. Trường điện từ biến thiên có đại lượng đặc trưng biến thiên theo thời gian và không thay đổi theo không gian
+A. Đúng
+B. Sai
+B
+59. Rotation của một vécto là một hằng số
+A. Đúng
+B. Sai
+B
+60. Với sóng lan truyền
+A. Điện trường biến thiên theo thời gian
+B. Từ trường biến thiên theo thời gian
+C. Điện trường không biến thiên theo thời gian
+D. Điện và từ trường biến thiên theo không gian
+E. A, B, D
+E
+61. Véc tơ điện cảm
+A. Phụ thuộc vào độ lớn điện tích nguồn
+B. Phụ thuộc vào môi trường đặt điện tích
+C. Không phụ thuộc vào khoảng cách
+A
+62. Sóng điện từ có tần số thấp hơn thì sẽ có bước sóng ngắn hơn.
+A. Đúng
+B. Sai
+B
+63. Trường tĩnh điện sinh ra bởi
+A. Dòng phụ thuộc tần số
+B. Dòng không đổi
+C. Điện tích chuyển động
+D. Điện tích đứng yên
+D
+64. Sóng điện từ phẳng đơn sắc truyền từ thủy tinh đến mặt phân cách thủy tinh và không khí. Sóng truyền trong thủy tinh là
+A. Sóng tới
+B. Sóng phản xạ
+C. Sóng đứng
+C
+65. E(t,x)=40exp(j6pi*10^8 t)exp(j2pi*x)i_y. Sóng này là sóng
+A. Truyền theo chiều dương trục y
+B. Nghịch
+C. Biên độ thay đổi
+B
+66. Số lượng điện tích trong một hệ cô lập về điện luôn tăng không ngừng theo thời gian
+A. Đúng
+B. Sai
+B
+67. Sóng đứng là giao thoa của sóng tới và sóng phản xạ.
+A. Đúng
+B. Sai
+A
+68. Sóng điện từ phẳng đơn sắc không cần môi trường truyền.
+A. Đúng
+B. Sai
+A
+69. Nguyên lý đổi lẫn được sử dụng để
+A. Giảm độ chính xác của việc giải hệ phương trình Maxwell
+B. Tăng độ chính xác của việc giải hệ phương trình Maxwell
+C. Giảm thời gian của việc giải hệ phương trình Maxwell
+D. Tăng thời gian của việc giải hệ phương trình Maxwell
+C
+70. Trường tĩnh điện là trường thế và biến thiên theo không gian.
+A. Đúng
+B. Sai
+A
+71. E(t,x)=-40exp(j6pi*10^8 t)exp(-j2pi*x)i_y. Sóng này là sóng 
+A.Thuận
+B. Truyền trong không gian tự do
+C. Đứng
+D. A, B 
+D
+72. Sóng ánh sáng truyền trong nước với các vận tốc khác nhau.
+A. Đúng
+B. Sai
+A
+73. Các đại lượng đặc trưng của sóng trong không khí sẽ không phụ thuộc tần số.
+A. Đúng
+B. Sai
+B
+74. Cho sóng phẳng đơn sắc E=-100sin(6π.10⁸t+2πx).exp(+πx)i_y. Trong đó i_y là véc tơ đơn vị theo hướng oy. Hướng của véc tơ cường độ từ trường
+A. Chiều âm trục z
+B. Chiều dương trục x
+C. Chiều âm trục y
+D. Chiều dương trục z
+D
+75. Véc tơ điện cảm
+A. Phụ thuộc vào giá trị điện tích nguồn
+B. Phụ thuộc vào môi trường
+C. Phụ thuộc vào khoảng cách
+D. A, C
+D
+76. Sóng điện từ phẳng đơn sắc truyền từ thủy tinh đến mặt phân cách thủy tinh và không khí. Sóng truyền trong không khí là
+A. Sóng chạy
+B. Sóng đứng
+C. Sóng tới
+D. Sóng phản xạ
+A
+77. Điều kiện biên giữa hai môi trường điện môi
+A. Ht1-Ht2=0
+B. Et1-Et2=0
+C. Hn1-Hn2=ρ
+D. A, B
+D
+78. Rot A=0
+A. Trường véc tơ A là trường có đường sức hở
+B. Trường véc tơ A là trường xoáy
+C. Trường véc tơ A là trường có nguồn
+D. Trường véc tơ A là trường không có nguồn
+A
+79. Vận tốc pha của sóng truyền trong điện môi không phụ thuộc tần số.
+A. Đúng
+B. Sai
+A
+80. Sóng cầu là sóng có mặt đồng biên và mặt đồng pha là mặt phẳng
+A. Đúng
+B. Sai
+B
+81. Faraday là phương trình cơ bản của trường tĩnh điện
+A. Đúng
+B. Sai
+B
+82. Trường tĩnh không mang năng lượng
+A. Đúng
+B. Sai
+B
+83. Phương trình thứ 3 của hệ phương trình Maxwell được dẫn ra từ định luật vật lý cơ bản nào
+A. Ampres
+B. Faraday
+C. Gauss
+C
+84. Chiều dịch chuyển năng lượng của trường điện từ được xác định bởi hướng của véc tơ Poynting.
+A. Đúng
+B. Sai
+A
+85. Cho biểu thức sóng như sau: E(t,x)=40exp(j3pi*10^8 t)exp(+jpi*x)i_y. Sóng này là sóng
+A. Đứng
+B. Thuận
+C. Nghịch
+C
+86. Từ trường tĩnh có nguồn và mang năng lượng
+A. Đúng
+B. Sai
+B
+87. Véc tơ cường độ điện trường và véc tơ cường độ từ trường là hai đại lượng cơ bản của từ trường tĩnh
+A. Đúng
+B. Sai
+B
+88. Trường điện từ là trường
+A. Vô hướng
+B. Có hướng
+B
+89. Sóng điện từ phẳng đơn sắc truyền từ thủy tinh đến mặt phân cách thủy tinh và kim loại. Có sóng truyền trong kim loại không?
+A. Có
+B. Không
+C. Có, rất ít
+C
+90. Định luật vi phân Gauss sử dụng toán tử rot.
+A. Đúng
+B. Sai
+B
+91. Div B = 0
+A. Trường véc tơ B là trường không xoáy
+B. Trường véc tơ B là trường có nguồn
+C. Trường véc tơ B là trường không có nguồn
+C
+92. Cho sóng phẳng đơn sắc E=100sin(6π.10⁸t+2πx).exp(+πx)i_y. Trong đó i_y là véc tơ đơn vị theo hướng oy. Tần số truyền
+A. 300 MHz
+B. 300 GHz
+C. 600 MHz
+D. 600 GHz
+A
+93. Trường tĩnh điện là một trường 
+A. Có đường sức hở
+B. Thế
+C. Xoáy
+D. A, B
+D
+94. Maxwell là phương trình cơ bản của trường tĩnh điện.
+A. Đúng
+B. Sai
+B
+95. Cho sóng phẳng đơn sắc E=100sin(6π.10⁸t+2πx).i_y. Trong đó i_y là véc tơ đơn vị theo hướng oy. Pha của H
+A. 6π.10⁸t+2πx
+B. 6π.10⁸t+2πx+π
+C. 6π.10⁸t+2πx-π
+A
+96. Trong không khí, phương trình Poisson sẽ biến thành phương trình Maxwell
+A. Đúng
+B. Sai
+B
+97. Cường độ trường tĩnh điện ở một vị trí rất xa nguồn sẽ 
+A. Rất lớn
+B. Rất nhỏ
+C. Không đổi
+B
+98. Trường tĩnh điện là trường
+A. Có các đại lượng đặc trưng không phụ thuộc không gian
+B. Không có nguồn
+C. Có nguồn
+C
+99. Cho biểu thức sóng như sau: E(t,x)=40exp(j3pi*10^8 t)exp(+jpi*x)i_y. Hệ số suy hao là
+A. 0 (rad/m)
+B. 3pi (rad/m)
+C. pi (rad/m)
+A
+100. Tại một điểm rất gần dòng dẫn, từ trường sẽ rất nhỏ.
+A. Đúng
+B. Sai
+B
