@@ -1,6 +1,8 @@
 # MultiChoice
-Write by python, author: ledangquangdangquang
+Write by python
 
-simpler than quizizz
+Simpler than quizizz
+
+author: ledangquangdangquang
 # Usage
 Run file RUN.bat
