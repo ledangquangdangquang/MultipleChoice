@@ -1,0 +1,12 @@
+1.	1 transistor tiếp xúc lưỡng cực có cấu trúc gồm 3 tiếp xúc PN. Phát biểu này đúng hay sai
+A. True
+B. False
+B
+2.	Tiếp xúc PN có sự tham gia của miền base và miền emitter được gọi là tiếp xúc Base-Emitter. Phát biểu này đúng hay sai
+A. True
+B. False
+A
+3.	Trong BJT, hạt dẫn đa số trong miền emitter là hạt dẫn đa số trong miền base
+A. True
+B. False 
+B
