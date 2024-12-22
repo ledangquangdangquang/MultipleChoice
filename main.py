@@ -1,5 +1,6 @@
 import os
 import random
+import msvcrt
 
 directory = "."  # Đường dẫn đến thư mục, "." là thư mục hiện tại
 
@@ -48,28 +49,33 @@ def quiz_user(questions, is_retry=False):
         for option in question["options"]:
             print(option)
         
-        # Get answer from the user
+        # Lấy đáp án từ người dùng và kiểm tra tính hợp lệ
         user_answer = ""
-        while user_answer not in ["A", "B", "C", "D", "E"]:
-            user_answer = input("\nEnter your answer (A, B, C, D, E): ").strip().upper()
-            if user_answer not in ["A", "B", "C", "D", "E"]:
-                print("Invalid answer, please try again.")
+        mapping = {"1": "A", "2": "B", "3": "C", "4": "D"}  # Ánh xạ số sang chữ cái
+
+        while user_answer not in ["A", "B", "C", "D", "E", "1", "2", "3", "4", "5"]:
+            print("\nNhập đáp án của bạn (A, B, C, D, E): ", end="", flush=True)
+            user_answer = msvcrt.getch().decode('utf-8').strip().upper()
+            if user_answer not in ["A", "B", "C", "D", "E", "1", "2", "3", "4", "5"]:
+                print("Đáp án không hợp lệ, vui lòng nhập lại.")
         
-        # Check the answer
-        if user_answer == question["answer"]:
-            print("Correct!")
+        # Kiểm tra kết quả
+        if (user_answer in ["A", "B", "C", "D", "E"] and user_answer == question["answer"]) or \
+           (user_answer in ["1", "2", "3", "4"] and mapping[user_answer] == question["answer"]):
+            print(f"{user_answer}\nCorrect!")
             correct += 1
         else:
-            print(f"Incorrect! The correct answer is: {question['answer']}")
+            print(f"{user_answer}\nIncorrect! The correct answer is: {question['answer']}")
             if not is_retry:  # Only add incorrect answers if it's not a retry
-                wrong_questions.append(question)  
-
-
-        input("\nPress Enter to continue...")
+                wrong_questions.append(question)    
+        
+        # Đợi một chút trước khi chuyển câu hỏi
+        input("\nNhấn Enter để tiếp tục...")
 
     clear_screen()
     print(f"You answered {correct}/{len(questions)} questions correctly.")
     print("Author: ledangquangdangquang.")
+    input("\nNhấn Enter để tiếp tục...")
     
     # If there are incorrect answers, allow a one-time retry
     if wrong_questions and not is_retry:
