@@ -52,14 +52,14 @@ def quiz_user(questions, is_retry=False):
         # Lấy đáp án từ người dùng và kiểm tra tính hợp lệ
         user_answer = ""
         mapping = {"1": "A", "2": "B", "3": "C", "4": "D"}  # Ánh xạ số sang chữ cái
-
+        # Nhập cả 1 2 3 4 5 và A B C D E
         while user_answer not in ["A", "B", "C", "D", "E", "1", "2", "3", "4", "5"]:
             print("\nNhập đáp án của bạn (A, B, C, D, E): ", end="", flush=True)
             user_answer = msvcrt.getch().decode('utf-8').strip().upper()
             if user_answer not in ["A", "B", "C", "D", "E", "1", "2", "3", "4", "5"]:
                 print("Đáp án không hợp lệ, vui lòng nhập lại.")
         
-        # Kiểm tra kết quả
+        # Kiểm tra kết quả 
         if (user_answer in ["A", "B", "C", "D", "E"] and user_answer == question["answer"]) or \
            (user_answer in ["1", "2", "3", "4"] and mapping[user_answer] == question["answer"]):
             print(f"{user_answer}\nCorrect!")

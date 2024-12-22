@@ -1,4 +1,4 @@
-1.	1 transistor tiếp xúc lưỡng cực có cấu trúc gồm 3 tiếp xúc PN. Phát biểu này đúng hay sai
+1.	Sai 1 transistor tiếp xúc lưỡng cực có cấu trúc gồm 3 tiếp xúc PN. Phát biểu này đúng hay sai
 A. True
 B. False
 B
