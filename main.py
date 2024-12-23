@@ -61,7 +61,7 @@ def quiz_user(questions, is_retry=False):
         
         # Kiểm tra kết quả 
         if (user_answer in ["A", "B", "C", "D", "E"] and user_answer == question["answer"]) or \
-           (user_answer in ["1", "2", "3", "4"] and mapping[user_answer] == question["answer"]):
+           (user_answer in ["1", "2", "3", "4", "5"] and mapping[user_answer] == question["answer"]):
             print(f"{user_answer}\nCorrect!")
             correct += 1
         else:
