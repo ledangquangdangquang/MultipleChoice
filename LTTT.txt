@@ -1,0 +1,770 @@
+1. Chọn câu đúng sau:
+A. 	Tin luôn được biểu diễn dưới dạng số
+B. 	Tấm ảnh, bản nhạc, bức thư … không phải là các tin
+C. 	Tin là một ánh xạ liên tục đến người nhận
+D. 	Tin là dạng vật chất để biểu diễn hoặc thể hiện thông tin
+D
+2. Chọn phát biểu đúng trong những câu sau:
+A. 	Thông tin là những tính chất xác định của vật chất mà con người nhận được từ thế giới vật chất bên ngoài
+B. 	Thông tin không thể xuất hiện dưới dạng hình ảnh
+C. 	Thông tin tồn tại một cách chủ quan, phụ thuộc vào hệ thụ cảm
+D. 	Thông tin không thể xuất hiện dưới dạng âm thanh
+A
+3. Môn Lý thuyết thông tin bao gồm việc nghiên cứu:
+A. 	Vai trò của thông tin trong kỹ thuật
+B. 	Các quá trình truyền tin và lý thuyết mã hóa
+C. 	Lý thuyết toán xác suất ứng dụng trong truyền tin
+D. 	Cách chống nhiễu phi tuyến trong vô tuyến điện
+B
+4. Chọn câu đúng nhất về thông tin:
+A. 	Nguồn tin là nơi sản sinh ra tin
+B. 	Nguồn tin là tập hợp các tin có xác suất và ký hiệu như nhau
+C. 	Nguồn tin liên tục sinh ra tập tin rời rạc
+D. 	Nguồn tin rời rạc sinh ra tập tin liên tục
+A
+5. Chọn câu đúng nhất về đường truyền tin:
+A. 	Là môi trường Vật lý, trong đó tín hiệu truyền đi từ máy phát sang máy thu
+B. 	Là môi trương Vật lý đảm bảo an toàn thông tin
+C. 	Là môi trường Vật lý, trong đó tín hiệu truyền đi từ máy phát sang máy thu không làm mất thông tin của tín hiệu
+D. 	Đường truyền tin chính là kênh truyền tin
+A
+6. Để biến đổi một tín hiệu liên tục theo biên độ và thời gian thành tín hiệu số, chúng ta cần thực hiện quá trình nào sau đây:
+A. 	Rời rạc hóa theo trục thời gian và lượng tử hóa theo trục biên độ
+B. 	Giải mã dữ liệu
+C. 	Mã hóa dữ liệu
+D. 	Lượng tử hóa theo trục thời gian và rời rạc hóa theo trục biên độ
+A
+7. Chọn câu đúng về tín hiệu:
+A. 	Tín hiệu là một ánh xạ liên tục đến người nhận
+B. 	Tấm ảnh, bản nhạc, bức thư … không phải là các tin
+C. 	Tin luôn được biểu diễn dưới dạng số
+D. 	Tín hiệu là quá trình ngẫu nhiên
+D
+8. Chọn phát biểu đúng nhất về đặc trưng thống kê:
+A. 	Đặc trưng cho các quá trình ngẫu nhiên chính là các quy luật thống kê và các đặc trưng thống kê
+B. 	Kỳ vọng, phương sai, hàm tự tương quan, hàm tương quan là các quy luật thống kê
+C. 	Các hàm phân bố và mật độ phân bố là những đặc trưng thống kê
+D. 	Tín hiệu và nhiễu không phải là quá trình ngẫu nhiên theo quan điểm thống kê
+A
+9. Chọn câu đúng nhất về hàm tự tương quan:
+A. 	Hàm tự tương quan là quy luật thống kê thể hiện của quá trình ngẫu nhiên
+B. 	Hàm tự tương quan Rx(t1,t2) luôn được tính bằng biểu thức sau: Rx(t1,t2) = M{[X(t).mx(t)]2}
+C. 	Hàm tự tương quan Rx(t1,t2) đặc trưng cho sự phụ thuộc thống kê giữa hai giá trị ở hai thời điểm khác nhau của một quá trình ngẫu nhiên
+D. 	Hàm tự tương quan Rx(t1,t2) luôn bằng phương sai Dx(t) với mọi t
+C
+10. Khái niệm lượng tin được định nghĩa dựa trên:
+A. 	Năng lượng của tín hiệu mang tin
+B. 	Độ bất định của tin
+C. 	Ý nghĩa của tin
+D. 	Năng lượng của tín hiệu mang tin và ý nghĩa của tin
+B
+11. Chọn phát biểu đúng nhất về Entropy của nguồn tin H(X):
+A. 	Là đại lượng đặc trưng cho độ bất định trung bình của nguồn tin
+B. 	Đạt cực tiểu khi nguồn là đẳng xác suất
+C. 	Đạt cực đại khi nguồn là đẳng xác suất
+D. 	Tất cả các phương án trên đều sai
+A
+12. Chọn phát biểu sai về độ bất định:
+A. 	Độ bất định của phép chọn tỷ lệ nghịch với xác suất chọn một phần tử
+B. 	Độ bất định gắn liền với bản chất ngẫu nhiên của phép chọn
+C. 	Độ bất định của một phần tử có giá trị 1 bít khi xác suất chọn phần tử đó là 1
+D. 	Độ bất định còn được gọi là lượng thông tin riêng của biến cố tin
+D
+13. Entropy của nguồn rời rạc nhị phân. H(A) = .p log p . (1.p)log(1.p) Khi p=1/2 thì H(A) đạt max. Chọn câu đúng về H(A)max :
+A. 	H(A)max =3/2 bít
+B. 	H(A)max =1/2 bít
+C. 	H(A)max =1 bít
+D. 	H(A)max =0
+C
+14. Trong một trận thi đấu bóng đá Quốc tế, đội tuyển Việt Nam thắng đội tuyển Brazin, thông tin này có độ bất định là:
+A. 	Bằng 0
+B. 	Vô cùng lớn
+C. 	Nhỏ hơn 0
+D. 	Lớn hơn 0
+B
+15. Học sinh A có thành tích 12 năm liền đạt danh hiệu học sinh Giỏi, học sinh B học lực kém. Thi tốt nghiệp phổ thông trung học, học sinh A trượt, học sinh B đỗ thủ khoa. Thông tin về học sinh B đỗ thủ khoa, học sinh A trượt có độ bất định là:
+A. 	Bằng 0
+B. 	Vô cùng lớn
+C. 	Nhỏ hơn 0
+D. 	Lớn hơn 0
+B
+16. Chọn ngẫu nhiên một trong các số từ 0 đến 7 có xác suất như nhau. Khi đó xác suất của số được chọn ngẫu nhiên là:
+A. 	7
+B. 	1/8
+C. 	8
+D. 	7
+B
+17. Một thiết bị vô tuyến điện gồm 16 khối có độ tin cậy như nhau và được mắc nối tiếp. Giả sử có một khối nào đó bị hỏng, khi đó xác suất của một khối hỏng là:
+A. 	1/16
+B. 	16
+C. 	.16
+D. 	.1/16
+A
+18. Bộ tú lơ khơ 52 quân (Không kể făng teo), A rút ra một quân bài bất kỳ. Xác suất về quân bài mà A đã rút là:
+A. 	Bằng 1/52
+B. 	Nhỏ hơn 5
+C. 	Lớn hơn 5 nhỏ hơn 6
+D. 	Lớn hơn 6
+A
+19. Chọn câu sai trong các câu sau:
+A. 	Độ bất định sẽ trở thành thông tin khi nó bị thủ tiêu
+B. 	Độ bất định chính là thông tin
+C. 	Lượng thông tin = Độ bất định tiên nghiệm + Độ bất định hậu nghiệm
+D. 	Lượng thông tin = Độ bất định tiên nghiệm . Độ bất định hậu nghiệm
+C
+20. Chọn câu đúng sau:
+A. 	Lượng thông tin = Thông tin tiên nghiệm . Thông tin hậu nghiệm
+B. 	Thông tin hậu nghiệm chính là thông tin riêng
+C. 	Lượng thông tin = Thông tin hậu nghiệm . Thông tin tiên nghiệm
+D. 	Lượng thông tin = Thông tin tiên nghiệm + Thông tin hậu nghiệm
+A
+21. Chọn câu sai trong các câu sau:
+A. 	Thông tin tiên nghiệm (ký hiệu I(xk)) được xác định theo công thức sau: I(xk) = log P (xk)
+B. 	Thông tin tiên nghiệm còn được gọi là lượng thông tin riêng
+C. 	Thông tin tiên nghiệm (ký hiệu I(xk)) được xác định theo công thức sau: I(xk) = .log P (xk)
+D. 	Thông tin tiên nghiệm còn được gọi là lượng thông tin riêng được xác định theo công thức sau: I(xk) = log(1/ P (xk))
+A
+22. I(xk/yl) = .log p(xk/yl) là thông tin hậu nghiệm về xk p(xk/yl)=1 khi việc truyền tin không bị nhiễu. Chọn câu sai trong những câu về I(xk/yl) dưới đây:
+A. 	I(xk/yl) =0 khi kênh không có nhiễu
+B. 	I(xk/yl) là lượng tin bị mất đi do nhiễu
+C. 	I((xk/yl) là lượng tin có điều kiện
+D. 	I(xk/yl)=1/2 khi kênh không có nhiễu
+D
+23. I(xk/yl) là thông tin hậu nghiệm về xk p(xk/yl)=1 khi việc truyền tin không bị nhiễu. Chọn câu sai trong những câu về I(xk/yl) dưới đây:
+A. 	I(xk/yl) là lượng tin bị tổn hao do nhiễu
+B. 	I(xk/yl)=0 khi kênh không có nhiễu
+C. 	I(xk/yl) >1/2 khi kênh không có nhiễu
+D. 	I(xk/yl) là lượng thông tin về xk khi đã biết yl
+C
+24. Chọn câu sai trong các câu sau:
+A. 	Lượng tin còn lại của xk sau khi nhận được yl ký hiệu I(xk/yl)
+B. 	I(xk/yl) là lượng tin riêng của xk và yl
+C. 	Lượng tin I(xk) là lượng tin ban đầu của xk
+D. 	Lượng tin I(xk) là lượng tin ban đầu của xk, lượng tin còn lại của xk sau khi đã nhận được yl ký hiệu là I(xk/y1)
+B
+25. Cho tin xi có xác suất là P(xi)=0,5; lượng tin riêng I(x1) của tin này bằng các đại lượng nào dưới đây:
+A. 	4 bít
+B. 	1 bít
+C. 	1/4 bít
+D. 	2 bít
+B
+26. Cho tin xi có xác suất P(xi)=1/4, lượng tin riêng I(xi) của tin này bằng các đại lượng nào dưới đây:
+A. 	2 bít
+B. 	4 bít
+C. 	1/2 bít
+D. 	1/4 bít
+A
+27. Cho tin xi có xác suất P(xi)=1/8, lượng tin riêng I(xi) của tin này bằng các đại lượng nào dưới đây:
+A. 	5 bít
+B. 	3 bít
+C. 	4 bít
+D. 	1/4 bít
+B
+28. Cho tin xi có xác suất P(xi)=1/16, lượng tin riêng I(xi) của tin này bằng các đại lượng nào dưới đây:
+A.  1/4 bít
+B. 	2 bít
+C. 	3 bít
+D. 	4 bít
+D
+29. Cho tin xi có xác suất P(xi)=1/27, lượng tin riêng I(xi) của tin này bằng các đại lượng nào dưới đây:
+A. 	2log7 bít
+B. 	log1/9 bít
+C. 	log27 bít
+D. 	log1/27 bít
+C
+30. Cho tin xi có xác suất P(xi)=1/9, lượng tin riêng I(xi) của tin này bằng các đại lượng nào dưới đây:
+A. 	log9 bít
+B. 	log1/3 bít
+C. 	2log3 bít
+D. 	log1/9 bít
+C
+31. Cho tin xi có xác suất P(xi)=1/25, lượng tin riêng I(xi) của tin này bằng các đại lượng nào dưới đây:
+A. 	log2/5 bít
+B. 	2log5 bít
+C. 	log1/25 bít
+D. 	log25 bít
+B
+32. Tìm câu sai trong những câu dưới đây:
+A. 	Độ bất ngờ của tin xi trong nguồn tin XN được tính bằng Entropy của lớp tin xi trong nguồn tin XN
+B. 	Độ bất định của tin và lượng tin về ý nghĩa trái ngược nhau nhưng về giá trị lại bằng nhau
+C. 	Độ bất định của tin và lượng tin có ý nghĩa như nhau nhưng giá trị khác nhau
+D. 	Lượng tin trung bình được hiểu là lượng tin trung bình trong một tin bất kỳ của nguồn tin đã cho
+C
+33. Lượng thông tin riêng (độ bất định) của một biến ngẫu nhiên xk là I(xk). Chọn biểu thức sai trong các biểu thức dưới đây:
+A. 	I(xk) = ln p(xk) đơn vị đo là bít
+B. 	I((xk) = .lg p(xk) đơn vị đo là hart
+C. 	I(xk) = .ln p(xk) đơn vị đo là nat
+D. 	I(xk) = .log2 p(xk) đơn vị đo là bít
+A
+34. Lượng thông tin riêng (độ bất định) của một biến ngẫu nhiên xk là I(xk) được tính bằng biểu thức nào dưới đây:
+A. 	I(xk) = k ln p(xk)
+B. 	I(xk) = .ln p(xk) đơn vị đo là bít
+C. 	I(xk) = .log2 p(xk) đơn vị đo là nat
+D. 	I(xk) = lg p(xk) đơn vị đo là hart
+A
+35. Lượng thông tin riêng (độ bất định) của một biến ngẫu nhiên xk là I(xk)được tính như sau: I(xk) = k ln p(xk), trong đó k là hệ số tỷ lệ. Tìm câu sai về cách chọn k trong các câu dưới đây:
+A. 	Chọn k=1 ta có I(xk) = ln p(xk)
+B. 	Chọn k=.1 ta có I(xk) = .ln p(xk)
+C. 	Chọn k=.(1/ln10) ta có I(xk) = .lg p(xk)
+D. 	Chọn k=.(1/ln2) ta có I(xk) = .log2 p(xk)
+A
+36. Entropy có điều kiện về 1 trường tin A khi đã rõ trường tin B là H(A/B). Trong các tính chất của H(A/B) dưới đây, tính chất nào sai:
+A. 	H(A/B) nhỏ hơn hoặc bằng H(B/A)
+B. 	0 nhỏ hơn hoặc bằng H(A/B)
+C. 	H(A) lớn hơn hoặc bằng H(A/B)
+D. 	H(A/B) nhỏ hơn hoặc bằng H(A)
+A
+37. Entropy có điều kiện về 1 trường tin B khi đã rõ trường tin A là H(B/A). Tính chất nào của H(B/A) dưới đây là đúng:
+A. 	0 lớn hơn hoặc bằng H(B/A)
+B. 	0 nhỏ hơn hoặc bằng H(B/A)
+C. 	H(A/B) nhỏ hơn hoặc bằng H(B/A)
+D. 	H(B/A) nhỏ hơn hoặc bằng H(A)
+B
+38. Entropy của trường biến cố đồng thời H(AB) được tính bằng công thức nào sau đây:
+A. 	H(A) + H(A/B)
+B. 	H(A) + H(B)
+C. 	H(A) + H(B) . H(A/B) . H(B/A)
+D. 	H(B) + H(A/B)
+D
+39. Lượng thông tin chéo trung bình (ký hiệu là I(A,B)) có các tính chất nào sau đây:
+A. 	I(A,B) = .H(A) khi kênh có nhiễu
+B. 	0 nhỏ hơn hoặc bằng I(A,B) nhỏ hơn hoặc bằng H(A)
+C. 	I(A,B) = H(B) khi kênh có nhiễu
+D. 	I(A,B) = H(A) khi kênh có nhiễu
+B
+40. Lượng thông tin chéo trung bình (ký hiệu là I(A,B)). Trong các tính chất dưới đây, tính chất nào sai:
+A. 	I(A,B) nhỏ hơn hoặc bằng H(A)
+B. 	I(A,B) = H(A) khi kênh có nhiễu
+C. 	0 nhỏ hơn hoặc bằng I(A,B)
+D. 	I(A,B) = H(A) khi kênh không có nhiễu
+B
+41. Lượng thông tin chéo trung bình (Ký hiệu là I(A,B)), có các tính chất nào sau đây:
+A.	I(A,B) = 1; khi kênh bị đứt
+B. 	0 <= I(A,B) và I(A,B) = 0; khi kênh bị đứt
+C. 	0 >= I(A,B)
+D. 	I(A,B) = H(A); khi kênh có nhiễu
+B
+42. Lượng thông tin chéo trung bình (Ký hiệu là I(A,B)), trong các tính chất dưới đây của I(A,B), tính chất nào sai:
+A. 	I(A,B) = H(A); khi kênh không có nhiễu
+B. 	I(A,B) = 0; khi kênh bị đứt
+C. 	H(A) <= I(A,B)
+D. 	I(A,B) >=1; khi kênh bị đứt
+D
+43. Mệnh đề nào sau đây sai:
+A. 	H(A/B) <= H(A);
+B. 	H(A,B) <= H(A) + H(B);
+C. 	I(A,B) = H(A) + H(B) + H(AB);
+D. 	I(A,B) = H(A) + H(B) . H(AB);
+C
+44. Chọn ngẫu nhiên một trong các số từ 0 đến 7 có xác suất như nhau. Độ bất định của số được chọn ngẫu nhiên là:
+A. 	1/8 bít;
+B. 	.3 bít;
+C. 	3 bít;
+D. 	8 bít;
+C
+45. Một thiết bị vô tuyến điện gồm 16 khối có độ tin cậy như nhau và được mắc nối tiếp. Giả sử có một khối nào đó bị hỏng, độ bất định của khối hỏng là:
+A. 	1/16 bít;
+B. 	16 bít;
+C. 	1/4 bít;
+D. 	4 bít;
+D
+46. Bộ tú lơ khơ 52 quân (Không kể făng teo), A rút ra một quân bài bất kỳ. Độ bất định về quân bài mà A đã rút là:
+A. 	Nhỏ hơn 5 bít;
+B. 	Lớn hơn 5 nhỏ hơn 6 bít;
+C. 	Bằng 6 bít;
+D. 	Lớn hơn 6 bít;
+B
+47. Một hộp có 8 đồng tiền kim loại, trong đó có 02 đồng tiền 500 đồng, 02 đồng tiền 1000 đồng, 2 đồng tiền 2000 và 2 đồng tiền 5000 đồng. Chọn ngẫu nhiên 1 trong 8 đồng tiền đó, hỏi khi đó xác suất của đồng tiền được chọn ngẫu nhiên là:
+A. 	8;
+B. 	.1/2;
+C. 	1/8;
+D. 	1/4;
+D
+48. Một hộp có 8 đồng tiền kim loại, trong đó có 02 đồng tiền 500, 02 đồng tiền 1000, 2 đồng tiền 2000 và 2 đồng tiền 5000. Chọn ngẫu nhiên 1 trong 8 đồng tiền đó, hỏi khi đó độ bất định của đồng tiền được chọn ngẫu nhiên là:
+A. 	1/4 bít;
+B. 	8 bít;
+C. 	.1/2 bít;
+D. 	2 bít;
+D
+49. Cho nguồn tin X = {x1, x2, x3} với các xác suất lần lượt là {1/2, 1/4, 1/4}. Entropy của nguồn tin H(X) được tính là:
+A. 	1/2log2 + 1/4 log4 + 1/4 log8
+B. 	1/2log2 + 1/4 log4 + 1/2 log4
+C. 	1/2log2 + 1/4 log4 + 1/4 log4
+D. 	1/2log2 + 1/2 log4 + 1/4 log4
+C
+50. Chọn câu sai:
+A. 	Xác suất xuất hiện càng lớn, "lượng tin" thu được càng lớn
+B. 	Một tin X có xác suất xuất hiện là p(x), nếu p(x) càng nhỏ thì "lượng tin" khi nhận được tin này cũng sẽ càng lớn
+C. 	Nếu p(x) càng lớn thì 1/p(x) càng nhỏ
+D. 	Một tin x có xác suất xuất hiện là p(x), nếu p(x) càng lớn thì "lượng tin" khi nhận được tin này cũng sẽ càng nhỏ
+A
+51. Quá trình xử lý tín hiệu trong máy thu tối ưu được gọi là xử lý tối ưu tín hiệu. Xử lý để nhận lời giải có xác suất sai bé nhất. Chọn câu đúng nhất về xử lý tối ưu các tín hiệu:
+A. 	Dựa vào các tiêu chuẩn tối ưu, bằng công cụ thống kê toán học người ta xác định được quy tắc giải tối ưu, do đó ngày nay lý thuyết truyền tin đã cho phép bằng toán học tổng hợp được máy thu tối ưu.
+B. 	Việc tổng hợp các máy thu (xây dựng sơ đồ giải) chỉ căn cứ vào các tiêu chuẩn chất lượng mang tính chất chức năng mà không mang tính chất thống kê.
+C. 	Ảnh hưởng của nhiễu lên chất lượng của máy thu tối ưu chỉ được tính theo tỷ số tín/tạp
+D. 	Việc tổng hợp máy thu tối ưu là dựa vào trực giác, kinh nghiệm, thí nghiệm
+A
+52. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x2+ x3 tương ứng đa thức thông tin a(x) = x2.Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	0101110;
+B. 	0110100;
+C. 	1110110;
+D. 	0010111;
+C
+53. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x2+ x3 tương ứng đa thức thông tin a(x) = x.Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	0010111;
+B. 	1110100;
+C. 	0110100;
+D. 	0101110;
+B
+54. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x2+ x3 tương ứng đa thức thông tin a(x) = x3.Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	0110001;
+B. 	1110100;
+C. 	0101110;
+D. 	0110100;
+A
+55. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x2+ x3 tương ứng đa thức thông tin a(x) = x + x2+ x3.Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	0101110;
+B. 	0110100;
+C. 	1110100;
+D. 	0100111;
+D
+56. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x2+ x3 tương ứng đa thức thông tin a(x) = 1 + x + x2.Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	1001110;
+B. 	0100111;
+C. 	1110100;
+D. 	0101110;
+A
+57. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x2+ x3 tương ứng đa thức thông tin a(x) = 1 + x .Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	1110010;
+B. 	0101100;
+C. 	0101110;
+D. 	1001110;
+B
+58. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x2+ x3 tương ứng đa thức thông tin a(x) = 1 +x2+x3.Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	1001110;
+B. 	0101110;
+C. 	0001011;
+D. 	1110010;
+C
+59. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=2+ x3 tương ứng đa thức thông tin a(x) = 1 +x2+x3.Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	1110010;
+B. 	0101110;
+C. 	1010011;
+D. 	1001110;
+C
+60. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x2+ x3 tương ứng đa thức thông tin a(x) = 1 + x3.Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	1110010;
+B. 	1001110;
+C. 	1010011;
+D. 	1101001;
+D
+61. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x2+ x3 tương ứng đa thức thông tin a(x) = x + x2.Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	0010110;
+B. 	1000110;
+C. 	0110111;
+D. 	1110010;
+A
+62. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x2+ x3 tương ứng đa thức thông tin a(x) = 1 + x2.Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	1000110;
+B. 	0110111;
+C. 	1110010;
+D. 	0111010;
+B
+63. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x2+ x3 tương ứng đa thức thông tin a(x) = x + x3.Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	0110111;
+B. 	1000101;
+C. 	0111010;
+D. 	1000110;
+B
+64. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x + x3 tương ứng đa thức thông tin a(x) =x2.Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	1110010;
+B. 	1000110;
+C. 	0111010;
+D. 	0110111;
+A
+65. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x + x3 tương ứng đa thức thông tin a(x) =x .Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	1110010;
+B. 	1000110;
+C. 	0110100;
+D. 	0110111;
+C
+66. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x + x3 tương ứng đa thức thông tin a(x) =x3.Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	1110010;
+B. 	1000110;
+C. 	0110111;
+D. 	1010001
+D
+67. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x + x3 tương ứng đa thức thông tin a(x) = x + x2 + x3.Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	0010111;
+B. 	1010001
+C. 	1000110;
+D. 	1110010;
+A
+68. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x + x3 tương ứng đa thức thông tin a(x) = 1 + x + x2 .Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	1000110;
+B. 	1110010;
+C. 	0010111;
+D. 	0101110;
+D
+69. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x + x3 tương ứng đa thức thông tin a(x) = 1 + x .Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A.      0101110;
+B. 	1011100;
+C. 	1110010;
+D. 	0010111;
+B
+70. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x + x3 tương ứng đa thức thông tin a(x) = 1 + x2 + x3.Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	0010111;
+B. 	0101110;
+C. 	1110010;
+D. 	1001011;
+D
+71. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x + x3 tương ứng đa thức thông tin a(x) =x2 + x3.Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	0100011;
+B. 	1110010;
+C. 	1000110;
+D. 	0111001;
+A
+72. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x + x3 tương ứng đa thức thông tin a(x) = 1 + x3.Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	1000110;
+B. 	0111001;
+C. 	1110010;
+D. 	0100011;
+B
+73. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x + x3 tương ứng đa thức thông tin a(x) = x + x2.Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	1000110;
+B. 	0100011;
+C. 	1110010;
+D. 	0111001;
+A
+74. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x + x3 tương ứng đa thức thông tin a(x) = 1 + x2.Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	1000110;
+B. 	1110010;
+C. 	0011010;
+D. 	0111001;
+C
+75. Cho mã Cyclic C(7,4) có đa thức sinh là g(x)=1 + x + x3 tương ứng đa thức thông tin a(x) = x + x3.Sử dụng thuật toán 4 bước để thiết lập từ mã hệ thống, sẽ được kết quả nào dưới đây :
+A. 	1000110;
+B. 	0011010;
+C. 	1110010;
+D. 	1100101
+D
+76. Giả sử sau khi thực hiện mã hóa nguồn rời rạc A. Ta có kết quả mã hoá sau: Giải mã cho dãy bít nhận được có dạng 1111001101011110011000 sẽ được kết quả nào sau đây:
+A. 	A2.A1.A5.A4.A2.A1.A4
+B. 	A2.A1.A5.A4.A2.A1.A5.A1
+C. 	A2.A1.A5.A4.A2.A1.A3;
+D. 	A3.A1.A5.A4.A2.A1;
+B
+77. Giả sử sau khi thực hiện mã hóa nguồn rời rạc A. Ta có kết quả mã hoá sau:
+Giải mã cho dãy bít nhận được có dạng 11110011010111100110 sẽ được kết quả nào sau đây:
+A. 	A2.A1.A5.A4.A2.A1.A4
+B. 	A3.A1.A5.A4.A2.A1;
+C. 	A2.A1.A5.A4.A2.A1.A5;
+D. 	A2.A1.A5.A4.A2.A1.A3;
+C
+78. Giả sử sau khi thực hiện mã hóa nguồn rời rạc A. Ta có kết quả mã hoá sau:
+Giải mã cho dãy bít nhận được có dạng 1111001101011110010 sẽ được kết quả nào sau đây:
+A. 	A2.A1.A5.A4.A2.A1.A3;
+B. 	A3.A1.A5.A4.A2.A2;
+C. 	A2.A1.A5.A4.A2.A1.A4
+D. 	A3.A1.A5.A4.A2.A1;
+C
+79. Giả sử sau khi thực hiện mã hóa nguồn rời rạc A. Ta có kết quả mã hoá sau: Giải mã cho dãy bít nhận được có dạng 11110011010111100 sẽ được kết quả nào sau đây:
+A. 	A3.A1.A5.A4.A2.A2;
+B. 	A3.A2.A5.A4.A2.A1;
+C. 	A3.A1.A5.A4.A2.A1;
+D. 	A2.A1.A5.A4.A2.A1;
+D
+80. Giả sử sau khi thực hiện mã hóa nguồn rời rạc A. Ta có kết quả mã hoá sau: Giải mã cho dãy bít nhận được có dạng 11100011010111100 sẽ được kết quả nào sau đây:
+A. 	A3.A1.A5.A4.A2.A2;
+B. 	A3.A1.A5.A4.A2.A1;
+C. 	A3.A1.A5.A4.A2.A2;
+D. 	A3.A2.A5.A4.A2.A1;
+B
+81.Yêu cầu của phép mã hóa: những từ mã có độ dài nhỏ hơn không trùng với phần đầu của từ mã có độ dài lớn hơn Các tin có xác suất xuất hiện lớn hơn được mã hóa bằng các từ mã có độ dài nhỏ và ngược lại. Cho nguồn tin X = {x1,x2,x3,x4,x5} với các xác suất lần lượt là {1/2, 1/4, 1/8, 1/16, 1/16}. Biết x1 được mã hóa thành 0; x2 được mã hóa thành 10 .Chọn câu đúng dưới đây để mã hóa cho x3
+A. 	1010
+B. 	1111
+C. 	101
+D. 	110
+D
+82.Yêu cầu của phép mã hóa: những từ mã có độ dài nhỏ hơn không trùng với phần đầu của từ mã có độ dài lớn hơn Các tin có xác suất xuất hiện lớn hơn được mã hóa bằng các từ mã có độ dài nhỏ và ngược lại. Cho nguồn tin X = {x1,x2,x3,x4,x5} với các xác suất lần lượt là {1/2, 1/4, 1/8, 1/16, 1/16}. Biết x1 được mã hóa thành 0; x2 được mã hóa thành 11 ; x3 được mã hóa thành 100 .Chọn câu đúng dưới đây để mã hóa cho x4
+A. 	1010
+B. 	1111
+C. 	101
+D. 	110
+A
+83.Yêu cầu của phép mã hóa: những từ mã có độ dài nhỏ hơn không trùng với phần đầu của từ mã có độ dài lớn hơn Các tin có xác suất xuất hiện lớn hơn được mã hóa bằng các từ mã có độ dài nhỏ và ngược lại. Cho nguồn tin X = {x1,x2,x3,x4,x5} với các xác suất lần lượt là {1/2, 1/4, 1/8, 1/16, 1/16}. Biết x1 được mã hóa thành 0; x2 được mã hóa thành 10 ; x3 được mã hóa thành 110 ; x4 được mã hóa thành 1110 .Chọn câu đúng dưới đây để mã hóa cho x5
+A. 	1010
+B. 	1111
+C. 	101
+D. 	110
+B
+84.Cho nguồn tin X = {x1,x2,x3,x4,x5} với các xác suất lần lượt là {1/2, 1/4, 1/8, 1/16, 1/16}. Biết x1 được mã hóa thành 0; x2 được mã hóa thành 10 ; x3 được mã hóa thành 110 ; x4 được mã hóa thành 1110; x5 được mã hóa thành 1111. Bộ mã tối ưu cho nguồn trên có chiều dài trung bình tính theo công thức :
+A. 	1,88
+B. 	1,90
+C. 	1,875
+D. 	1,925
+C
+85.Chọn định nghĩa sai về mã xyclic trong các định nghĩa sau :
+A. 	Mã xyclic (n, k) là Ideal I = {g(X)} của vành đa thức Z2 [x]/Xn + 1
+B. 	Mã xyclic (n, k) là một bộ mã mà đa thức sinh có bậc r = n+k
+C. 	Mã xyclic là một bộ mã tuyến tính
+D. 	Mã xyclic là một bộ mã , mà nếu a(X) là một từ mã thì dịch vòng của a(X) cũng là một từ mã thuộc bộ mã này
+B
+86.Để mô tả mã tuyến tính, có thể sử dụng ma trận sinh Gk,n . Trong đại số tuyến tính ta biết rằng với mỗi Gk,n sẽ tồn tại ma trận Hr×n thỏa mãn G.HT = 0. Chọn câu sai sau :
+A. 	Gk,n là ma trận k hàng, n cột
+B. 	HT được gọi là ma trận k hàng, n cột ;
+C. 	Hr×n là ma trận r hàng, n cột
+D. 	HT được gọi là ma trận chuyển vị của H
+D
+87.Chọn câu sai về mã tuyến tính :
+A. 	2k các vétơ khác nhau là tất cả các tổ hợp tuyến tính có thể có của k véctơ hàng này G.H = 0.Trong đó r = n . k
+B. 	Trong đại số tuyến tính ta biết rằng với mỗi G sẽ tồn tại ma trận Hr×n thỏa mãn
+C. 	Để mô tả mã tuyến tính, có thể sử dụng ma trận sinh Gk,n
+D. 	Mã xyclic là một bộ mã tuyến tính
+B
+88.Cho mã Xyclic (n,k) Số các ô nhớ cần thiết để nhớ bộ mã là :
+A. 	kn
+B. 	n
+C. 	n.2k
+D. 	n7
+B
+89.Cho mã tuyến tính (n,k) Số ô nhớ cần thiết để nhớ bộ mã là:
+A. 	kn
+B. 	n+k
+C. 	n.2k
+D. 	n7
+A
+90.Cho mã Xyclic (7,3) Số các ô nhớ cần thiết để nhớ bộ mã là:
+A. 	3
+B. 	7
+C. 	21
+D. 	56
+B
+91. Cho mã tuyến tính (7,3) Số ô nhớ cần thiết để nhớ bộ mã là :
+A. 	1
+B. 	7
+C. 	21
+D. 	56
+C
+92. Cho mã Xyclic (7,4) Số các ô nhớ cần thiết để nhớ bộ mã là
+A. 	1
+B. 	7
+C. 	21
+D. 	56
+B
+93. Cho mã tuyến tính (7,4) Số ô nhớ cần thiết để nhớ bộ mã là :
+A. 	3
+B. 	7
+C. 	28
+D. 	56
+C
+94. Cho mã Cyclic C(n, k) = C(7,3), có đa thức sinh g(x) là :
+A. 	g(x) = 1 + x + x5
+B. 	g(x) = 1 + x + x2 + x4
+C. 	g(x) = 1 + x + x2
+D. 	g(x) = g(x) = 1 + x + x4
+B
+95. Cho mã Cyclic C(n, k) = C(7,3) , tìm câu sai về g(x) :
+A. 	g(x) không là ước của x7 + 1 ;
+B. 	Từ g(x) có thể xác định được ma trận sinh hệ thống G và ma trận kiểm tra H cho bộ mã
+C. 	g(x) có bậc 4
+D. 	g(x) là một ước của x7 + 1
+A
+96. Cho mã Cyclic C(n, k) = C(7,4), có đa thức sinh g(x) là :
+A. 	g(x) = 1 + x4
+B. 	g(x) = 1 + x2 + x4
+C. 	g(x) = 1 + x + x3
+D. 	g(x) = 1 + x + x4
+C
+97. Cho mã Cyclic C(n, k) = C(7,4) có đa thức sinh là g(x) thì :
+A. 	g(x) có bậc 4
+B. 	g(x) là một ước của x7 + 4 + 1
+C. 	g(x) có bậc 5
+D. 	Từ g(x) có thể xác định được ma trận sinh hệ thống G và ma trận kiểm tra H cho bộ mã
+D
+98. Giả sử sau khi thực hiện mã hóa, tin ai được mã hóa thành 1001, khi đó độ dài từ mã ni của tin này là :
+A. 	1
+B. 	2
+C. 	4
+D. 	5
+C
+99. Chọn đáp án sai trong các đáp án sau :
+A. 	H được gọi là ma trận kiểm tra của mã tuyến tính (n,k) và H chứa r véc tơ hàng trực giao với các véc tơ hàng của G
+B. 	Gk,n là ma trận kiểm tra n hàng, r cột
+C. 	H được gọi là ma trận sinh của mã tuyến tính (n,k)
+D. 	Gk,n không nhất thiết là ma trận sinh
+A
+100. Chọn câu đúng về mã tuyến tính ngẫu nhiên:
+A. 	Mã tuyến tính ngẫu nhiên là mã tuyến tính có các dấu mã được chọn ngẫu nhiên từ phép ánh xạ trong không gian phi tuyến
+B. 	Mã tuyến tính ngẫu nhiên là mã tuyến tính có các dấu mã được chọn ngẫu nhiên từ các dạng tuyến tính có thể có
+C. 	Mã tuyến tính ngẫu nhiên là mã tuyến tính có phép ánh xạ phi tuyến ngẫu nhiên
+D. 	Mã tuyến tính ngẫu nhiên là mã ngẫu nhiên có các dấu mã được chọn tuyến tính từ các dạng tuyến tính có thể có
+A
+101 . Suy giảm tín hiệu điện tử trong môi trường không khí
+A. Tỷ lệ nghịch với khoảng cách
+B.Tỷ lệ thuận với tần số
+C. Tỷ lệ thuận với bước sóng
+D. Không phụ thuộc vào tần số
+B
+102 . Cho sự kiện A có xác suất hiện là p ( 0<= p <=1). H(A) là entropy của A
+A. H(A) luôn >= 0 với mọi p
+B. Không phụ thuộc vào p
+C. H(A) luông nhỏ hơn 1 với mọi p
+D. Nếu p càng lớn thì H(A) càng lớn
+A
+103 . Chọn câu đúng về phổ của tín hiệu
+A. Tất cả các tín hiệu đều phân tích phổ được bằng cách phân tích thành tổng các tín hiệu tuần hoàn
+B. Phổ của tín hiệu là các thành phần tần số thấp chứa trong tín hiệu đó
+C. Phổ của tín hiệu là các thành phần tần số cao chứa trong tín hiệu đó
+D. Chỉ có tins hiệu tuần hoàn mới phân tích được phổ tần số
+A
+104 . Số các dấu mã khác nhau (về giá trị) được sử dụng trong bộ mã được gọi là cơ số mã. Ta ký hiệu giá trị này là m. Chọn câu sai về các dấu mã m:
+A. Nếu m = 2 thì bộ mã tương ứng được gọi là mã nhị phân
+B. Nếu m = 0 thì bộ mã tương ứng được gọi là mã đều
+C. Nếu m = p thì bộ mã tương ứng được gọi là m p phân
+D. Nếu m = 3 thì bộ mã tương ứng được gọi là mã tam phân
+B
+105 . Các yếu tố gây ra sự sai khác giữa tín hiệu thu và phát là
+A. Nhiễu
+B. Sự suy giảm cường độ
+C. Tất cả yếu tố trên
+D. Méo trễ lan truyền
+A
+106 . Suy giảm cường độ của tín hiệu phụ thuộc vào?
+A. Tất cả yếu tố trên
+B. Môi trường truyền dẫn
+C. Tần số truyền dẫn
+D. Khoảng cách truyền dẫn
+D
+107 . Thông lượng của một kênh truyền được hiểu là?
+A. Tốc độ của kênh truyền
+B. Dải tần số cuat tín hiệu cho phép đi qua kênh truyền mà có độ suy giảm không quá 3dB
+C. Số bit truyền qua 1 điểm của kênh truyền trên 1s
+D. Băng thông của kênh truyền
+C
+108 . Chọn  câu đúng về mã hệ thống tuyến tính
+A. Mã HTTT (n,k) là mã tuyến tính có độ dài n trong đó ta có thể chỉ ra được vị trí của n.k dấu thông tin trong từ mã
+B. Mã HTTT (n,k) là mã tuyến tính có độ dài n trong đó ta có thể chỉ ra được vị trí của k.1 dấu thông tin trong từ mã
+C. Mã HTTT (n,k) là mã tuyến tính có độ dài n trong đó ta có thể chỉ ra được vị trí của k dấu thông tin trong từ mã
+D. Mã HTTT (n,k) là mã tuyến tính có độ dài n trong đó ta có thể chỉ ra được vị trí của r =n.k dấu thông tin trong từ mã
+C
+109 . Vận tốc của sóng điện từ
+A. Luôn bằng 3.10^8 m/s
+B. Phụ thuộc vào môi trường truyền dẫn
+C.Phụ thuộc vào chất liệu dây dẫn
+D. Luôn bằng 3.10^8 km/s
+B
+110 . Cho bảng mã W = {01, 00, 0010, 0111, 0110}
+A. W tức thời
+B. W không tách được
+C. W có tính tách được, không tức thời
+D. W có tính tách được, tức thời
+C
+111 . Tốc độ truyền tối đa mã của kênh truyền phục thuộc vào
+A. Băng thông
+B. Tỷ số tín hiệu/nhiễu (S/N)
+C. Hệ số điều chế tín hiệu
+D. Tất cả yếu tố trên
+D
+112 . Bản chất thống kê của nguồn tin, thể hiện dưới hình thức nào
+A. Các tin mà nguồn sinh ra là liên tục
+B. Xác suất xuất hiện các tin giống nhau sau các tin khác nhau là khác nhau
+C. Các tin mà nguồn sinh ra là rời rạc
+D. Các tin khác nhau xuất hiện với xác suất khác nhau.
+D
+113 . Tham số nào được xem là quan trọng nhất đói với nguồn tin
+A. Tốc đọ phát tin của nguồn
+B. Entropy của nguồn
+C. Khả năng phát tin của nguồn
+D. Độ dư của nguồn
+B
+114 . Bạn hãy đưa ra điều kiện của việc thiết lập 1 bộ mã
+A. Giải mã được và giải đúng 1 cách duy nhất
+B. Bộ mã phải có tính prefix
+C. Bộ mã có tính không phủ nhau
+D. Cả 3 đáp án trên
+D
+115 . Nội dung của định lý mã hóa thứ nhất của Shannon ( đối với mã nhị phân) được nói : “Luôn luôn có thể xây dựng được 1 phép mã hóa các tin rời rạc có hiệu quả mà độ dài trung bình của từ mã có thể nhỏ tùy ý, nhưng không nhỏ hơn entropy xác định bới các đặc tính thống kê của nguồn” . Chọn câu đúng về độ dài từ mã
+A. Chiều dài trung bình các từ mã nhỏ nhất trong tất cả các cách mã hóa
+B. Số từ mã nhỏ nhất 
+C. Chiều dài trung bình của các từ mã nhỏ hơn hoặc bằng entropy của nguồn
+D. Số từ mã không đổi
+D
+163 . Cho tín hiệu s(t) = 2A + A.sin(8.\mathbit{\pi}\mathbit{F}_\mathbf{0} + \frac{\mathbit{\pi}}{\mathbf{2}}) + 2A sin(4.\mathbit{\pi}\mathbit{F}_\mathbf{0})
+A. Phổ vạch (gồm 2 vạch tần số )
+B. Phổ vạch (gồm 3 vạch tần số)
+C. Phổ liên tục
+D. Tất cả đều sai
+B
+164 . Tính tốc độ bit sau khi số hóa tín hiệu tiếng nói với Fs=8 kHz, số bit mã hóa n = 16
+A. 32 kbps
+B. 128 kpbs
+C. 64 kpbs
+D. 256 kpbs
+B
+165 . Lượng thông tin chéo trung bình I(A,B) có tính chất
+A. I(A,B) = - H(A) khi có nhiễu
+B. 0\ \le I(A,B) \le H(A)
+C. I(A,B) = H(B) khi có nhiễu
+D. I(A,B) = H(A) khi có nhiễu
+B
+166. Mã hóa tín hiệu fmax = 5kHz, theo định lý Nyquist thì nên lấy mẫu với tần số
+A. 8kHz
+B. 10kHz
+C. 5kHz
+D. Tất cả đều sai
+B
+167. Để mô tả mã tuyến tính, có thể sử dụng ma trận sinh \mathbit{G}_{\mathbit{k}.\mathbit{n}}. Trong đại số tuyến tính ta biết rằng mỗi  \mathbit{G}_{\mathbit{k}.\mathbit{n}} sẽ tồn tại ma trận  \mathbit{H}_{\mathbit{r}.\mathbit{n}}  thỏa mãn \mathbit{G}.\mathbit{H}^\mathbit{T}=\mathbf{0}. Chọn câu sai
+A. G_{k.n} là ma trận k hàng, n cột
+B. H^T là m trận k hàng, n cột
+C. H_{r.n}  là ma trận r hàng, n cột
+D. H^T là ma trận chuyển vị của H
+B
+Câu 168. Có 4 tin A,B,C,D bằng các tin từ mã của 1 bộ lọc giải mã đều nhị phân, có độ dài n = 3, khi đó độ dư thừa của bộ mã
+A.	23,33%
+B.	53,33%
+C.	33,33%
+D.	43,33%
+C
+Câu 169. Mã chập là
+A.	Mã tuyến tính có ma trận sinh có cấu trúc sao chép mã hóa có thể xem như một phép lọc (hoặc lấy tổng chập)
+B.	Một bộ mã hóa có các hàm hữu tỷ trong ma trận truyền
+C.	Mã khối với các khối k dấu tạo ra các khối n dấu
+D.	Mã tuyến tính có hàm truyền đạt là các chuỗi lũy thừa
+A
+Câu 170. Bảng mã nhị phân Huffman 
+A.	Mã phát hiện lỗi
+B.	Mã nén dữ liệu
+C.	Mã đường truyền
+D.	Mã bảo mật
+B
+Câu 171. Cho mã tuyến tính (7,3). Số ô nhớ cần thiết để nhớ bộ mã
+A.	1
+B.	7
+C.	21
+D.	56
+D
+Câu 172: Mã hóa kênh có tác dụng gì trong việc đạt đến dung lượng kênh?
+A. Tăng tốc độ truyền dữ liệu
+B. Giảm tỷ lệ lỗi mà không thay đổi tốc độ truyền
+C. Tăng tỷ lệ tín hiệu trên nhiễu
+D. Tăng dung lượng kênh
+B
+Câu 173: Thông tin tương hỗ là thước đo của điều gì?
+A. Tổng sự không chắc chắn của hai biến ngẫu nhiên
+B. Sự giảm không chắc chắn của một biến ngẫu nhiên do biết giá trị của biến khác
+C. Tổng entropy của hai biến ngẫu nhiên
+D. Sự khác biệt giữa các entropy của hai biến ngẫu nhiên
+B
+Câu 174: Nếu hai biến ngẫu nhiên X và Y độc lập với nhau, mutual information I(X;Y) sẽ là:
+A. 0  
+B. 1  
+C. -1  
+D. Không xác định
+A
+Câu 175: Theo định lý kênh nhiễu của Shannon, phát biểu nào sau đây là đúng?
+A. Dung lượng của kênh chỉ bị giới hạn bởi băng thông
+B. Không thể truyền thông không lỗi qua kênh nhiễu
+C. Có thể truyền thông không lỗi qua kênh nhiễu nếu tốc độ truyền dưới dung lượng của kênh
+D. Dung lượng của kênh là không giới hạn
+C
