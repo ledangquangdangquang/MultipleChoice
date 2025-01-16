@@ -1,19 +1,8 @@
-import os
-import random
-import msvcrt```
- _          _                                                     _                                                 
-| | ___  __| | __ _ _ __   __ _  __ _ _   _  __ _ _ __   __ _  __| | __ _ _ __   __ _  __ _ _   _  __ _ _ __   __ _ 
-| |/ _ \/ _` |/ _` | '_ \ / _` |/ _` | | | |/ _` | '_ \ / _` |/ _` |/ _` | '_ \ / _` |/ _` | | | |/ _` | '_ \ / _` |
-| |  __/ (_| | (_| | | | | (_| | (_| | |_| | (_| | | | | (_| | (_| | (_| | | | | (_| | (_| | |_| | (_| | | | | (_| |
-|_|\___|\__,_|\__,_|_| |_|\__, |\__, |\__,_|\__,_|_| |_|\__, |\__,_|\__,_|_| |_|\__, |\__, |\__,_|\__,_|_| |_|\__, |
-                          |___/    |_|                  |___/                   |___/    |_|                  |___/ 
+# Multiple-Choice
 
-```
-# MultiChoice
-Write by python
+Simpler than Quizizz.
 
-Simpler than quizizz
-
-author: ledangquangdangquang
+---
 # Usage
-Run file RUN.bat
+- Import your file with the same structure as **Questions.txt** file
+- Run file RUN.bat
