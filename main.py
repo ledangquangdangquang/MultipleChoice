@@ -45,7 +45,7 @@ def quiz_user(questions, is_retry=False):
     count = 1
     for question in questions:
         clear_screen()
-        print(f"({count}/{len(questions)}) {question["question"]}")
+        print(f"({count}/{len(questions)})\n {question["question"]}")
         for option in question["options"]:
             print(option)        
         mapping = {
@@ -93,7 +93,7 @@ def quiz_user(questions, is_retry=False):
 
     clear_screen()
     print(f"You answered {correct}/{len(questions)} questions correctly.")
-    print("@ 2025 by ledangquangdangquang.")
+    print("© 2025 by ledangquangdangquang.")
     input("\nPress Enter to continue...")
     
     # If there are incorrect answers, allow a one-time retry
@@ -120,7 +120,7 @@ def main():
         your_choice = input("Enter your choice: ").strip()
         if your_choice == "0":
             clear_screen()
-            print("@ 2025 by ledangquangdangquang.")
+            print("© 2025 by ledangquangdangquang.")
             break
         elif your_choice not in map(str, range(1, len(filenames) + 1)):
             print("Invalid choice, please try again.")
