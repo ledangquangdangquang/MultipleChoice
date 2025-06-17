@@ -45,7 +45,7 @@ def quiz_user(questions, is_retry=False):
     count = 1
     for question in questions:
         clear_screen()
-        print(f"({count}/{len(questions)})\n {question["question"]}")
+        print(f"---{count}/{len(questions)}---\n\n{question["question"]}")
         for option in question["options"]:
             print(option)        
         mapping = {
