@@ -42,24 +42,61 @@ def quiz_user(questions, is_retry=False):
     """Run a quiz for the user and save wrong answers for a retry"""
     correct = 0
     wrong_questions = []
-
+    count = 1
     for question in questions:
         clear_screen()
-        print(question["question"])
+        print(f"({count}/{len(questions)}) {question["question"]}")
         for option in question["options"]:
             print(option)
         
         # Lấy đáp án từ người dùng và kiểm tra tính hợp lệ
-        user_answer = ""
-        mapping = {"1": "A", "2": "B", "3": "C", "4": "D"}  # Ánh xạ số sang chữ cái
+        # user_answer = ""
+        # mapping = {"1": "A", "2": "B", "3": "C", "4": "D"}  # Ánh xạ số sang chữ cái
         # Nhập cả 1 2 3 4 5 và A B C D E
-        while user_answer not in ["A", "B", "C", "D", "E", "1", "2", "3", "4", "5"]:
-            print("\nNhập đáp án của bạn (A, B, C, D, E): ", end="", flush=True)
-            user_answer = msvcrt.getch().decode('utf-8').strip().upper()
-            if user_answer not in ["A", "B", "C", "D", "E", "1", "2", "3", "4", "5"]:
-                print("Đáp án không hợp lệ, vui lòng nhập lại.")
+        # while user_answer not in ["A", "B", "C", "D", "E", "1", "2", "3", "4", "5"]:
+        #     print("\nNhập đáp án của bạn (A, B, C, D, E): ", end="", flush=True)
+        #     user_answer = msvcrt.getch().decode('utf-8').strip().upper()
+        #     if user_answer not in ["A", "B", "C", "D", "E", "1", "2", "3", "4", "5"]:
+        #         print("Đáp án không hợp lệ, vui lòng nhập lại.")
         
-        # Kiểm tra kết quả 
+
+        # Bản đồ chuyển từ số sang chữ (nếu bạn có)
+        mapping = {
+            "1": "A",
+            "2": "B",
+            "3": "C",
+            "4": "D",
+            "5": "E"
+        }
+
+# ... bên trong vòng lặp quiz_user, thay đoạn bạn gửi bằng:
+
+        valid_keys = ["A", "B", "C", "D", "E", "1", "2", "3", "4", "5"]
+        user_answer = ""
+
+        while user_answer not in valid_keys:
+            print("\nNhập đáp án của bạn (A, B, C, D, E hoặc 1-5): ", end="", flush=True)
+            key = msvcrt.getch()
+
+            # Nếu là phím đặc biệt (mũi tên, chức năng), đọc thêm 1 byte để bỏ qua
+            if key in (b'\x00', b'\xe0'):
+                msvcrt.getch()
+                continue
+
+            try:
+                user_answer = key.decode('utf-8').strip().upper()
+            except UnicodeDecodeError:
+                continue  # Nếu không giải mã được, đợi người dùng nhập lại
+
+            if user_answer not in valid_keys:
+                print("Đáp án không hợp lệ, vui lòng nhập lại.")
+
+
+
+
+
+
+               # Kiểm tra kết quả 
         if (user_answer in ["A", "B", "C", "D", "E"] and user_answer == question["answer"]) or \
            (user_answer in ["1", "2", "3", "4", "5"] and mapping[user_answer] == question["answer"]):
             print(f"{user_answer}\nCorrect!")
@@ -68,7 +105,7 @@ def quiz_user(questions, is_retry=False):
             print(f"{user_answer}\nIncorrect! The correct answer is: {question['answer']}")
             if not is_retry:  # Only add incorrect answers if it's not a retry
                 wrong_questions.append(question)    
-        
+        count += 1
         # Đợi một chút trước khi chuyển câu hỏi
         input("\nNhấn Enter để tiếp tục...")
 
@@ -101,7 +138,7 @@ def main():
         your_choice = input("Enter your choice: ").strip()
         if your_choice == "0":
             clear_screen()
-            print("Author: ledangquangdangquang.")
+            print("@ 2025 by ledangquangdangquang.")
             break
         elif your_choice not in map(str, range(1, len(filenames) + 1)):
             print("Invalid choice, please try again.")
