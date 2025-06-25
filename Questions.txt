@@ -1,12 +1,20 @@
-1.	1 transistor tiếp xúc lưỡng cực có cấu trúc gồm 3 tiếp xúc PN. Phát biểu này đúng hay sai
-A. True
-B. False
+1. What is foo?	(The question does not contain any line breaks)
+A. answer 1 
+B. answer 2
+C. answer 3 
+D. answer 4 
 B
-2.	Tiếp xúc PN có sự tham gia của miền base và miền emitter được gọi là tiếp xúc Base-Emitter. Phát biểu này đúng hay sai
-A. True
-B. False
+
+2. What is bar? (Câu hỏi không có bất kỳ dấu xuống dòng nào)	
+A. answer 1 
+B. answer 2
+C. answer 3 
+D. answer 4 
 A
-3.	Trong BJT, hạt dẫn đa số trong miền emitter là hạt dẫn đa số trong miền base
-A. True
-B. False 
-B
+
+3. What is foo and bar? (Câu hỏi không có bất kỳ dấu Enter nào)	
+A. answer 1 
+B. answer 2
+C. answer 3 
+D. answer 4 
+D
