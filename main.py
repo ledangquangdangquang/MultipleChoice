@@ -94,7 +94,7 @@ def quiz_user(questions, is_retry=False):
     for question in questions:
         clear_screen()
 
-        lines = [f"--- {count}/{len(questions)} ---"]
+        lines = [f"--- {count}/{len(questions)} ---".center(BOX_WIDTH - 4)]
         lines.append("─" * (BOX_WIDTH - 4))
         lines.extend(textwrap.wrap(question["question"], width=BOX_WIDTH - 4))
         lines.extend(question["options"])
