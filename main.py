@@ -118,7 +118,7 @@ def quiz_user(questions, is_retry=False):
         print("\n")
         if (user_answer in mapping.values() and user_answer == question["answer"]) or \
            (user_answer in mapping and mapping[user_answer] == question["answer"]):
-            print(" " * left_pad + f"{user_answer} - ✅ Correct!")
+            print(" " * left_pad + f"{user_answer} - ✔  Correct!")
             correct += 1
         else:
             print(" " * left_pad + f"{user_answer} - ❌ Incorrect!")
