@@ -1,4 +1,4 @@
-from app import parse_questions
+from quiz import parse_questions
 
 # original Questions.txt format; question 3 has no answer and is skipped
 qs, skipped = parse_questions("1. Q one\nA. x\nB. y\nB\n\n2. Q two\nA. x\nB. y\nC. z\nA\n3. no answer\nA. x\n")
@@ -27,7 +27,7 @@ assert qs[0]["answer"] == "B", qs
 
 # .docx: paragraphs become lines, <w:br/> becomes a newline, XML entities are decoded
 import io, zipfile
-from app import docx_text
+from quiz import docx_text
 buf = io.BytesIO()
 with zipfile.ZipFile(buf, "w") as z:
     z.writestr("word/document.xml", '<w:document><w:body>'

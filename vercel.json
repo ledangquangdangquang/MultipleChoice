@@ -1,10 +1,11 @@
 {
+  "framework": null,
   "buildCommand": "",
   "outputDirectory": "web",
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/index" }
   ],
   "functions": {
-    "api/index.py": { "includeFiles": "{app.py,*.txt}" }
+    "api/index.py": { "includeFiles": "{quiz.py,*.txt}" }
   }
 }
