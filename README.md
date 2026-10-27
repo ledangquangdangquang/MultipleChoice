@@ -3,7 +3,7 @@
 Simpler than Quizizz.
 
 # Usage
-- Import your file with the same structure as **Questions.txt** file: put it next to `quiz.py`, or upload it on the menu screen (UTF-8 .txt or .docx, max 10 MB, not saved).
+- Import your file with the same structure as **Questions.txt** file: put it next to `quiz.py`, or upload files or a whole folder on the menu screen: each .txt / .docx becomes a question set (max 10 MB per file, not saved).
 - The web app also accepts common variations: `Câu 1:` / `1)` numbering, `a)` / `(A)` options, several options on one line, questions wrapped over lines, `Đáp án: B` / `Answer: B` lines, a `*` on the correct option, or an answer key at the end (`Đáp án:` then `1-B, 2-A ...`). `.docx` files work too (type the question numbers; Word's automatic numbering isn't read). After uploading you can download the file converted to the standard format.
 - Run `python quiz.py` — the quiz opens in your browser at http://127.0.0.1:8000.
 - Answer by clicking, or press `A`–`E` / `1`–`5`; `Enter` goes to the next question.

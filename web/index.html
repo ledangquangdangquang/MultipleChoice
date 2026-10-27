@@ -118,11 +118,12 @@
   select:hover { border-color: var(--color-ink-2); }
   .upload { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm) var(--space-md); }
   .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-  #upload:focus-visible + label { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+  #upload:focus-visible + label, #upload-dir:focus-visible + label { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+  #upload-hint { margin-top: var(--space-sm); }
   .check { display: flex; align-items: center; gap: var(--space-sm); margin-top: var(--space-lg); cursor: pointer; }
   .check input { width: 18px; height: 18px; margin: 0; accent-color: var(--color-accent); }
   #upload-msg:empty { display: none; }
-  #upload-msg { margin-top: var(--space-sm); }
+  #upload-msg { margin-top: var(--space-sm); white-space: pre-line; }
   #upload-dl { display: inline-block; margin-top: var(--space-xs); color: var(--color-accent); font-weight: 500; }
   #last-score { margin-top: var(--space-sm); }
   #last-score:empty { display: none; }
@@ -237,18 +238,20 @@
 
       <div class="field">
         <label for="file">Question set</label>
-        <select id="file"></select>
+        <select id="file"><optgroup label="Built-in" id="builtin"></optgroup></select>
         <p class="small muted" id="last-score"></p>
+        <a class="small" id="upload-dl" hidden>Download this set as formatted .txt</a>
       </div>
       <div class="field">
-        <span class="label">Or use your own file</span>
+        <span class="label">Or use your own files</span>
         <div class="upload">
-          <input type="file" id="upload" accept=".txt,.docx" class="sr-only">
-          <label for="upload" class="btn secondary">Upload .txt / .docx</label>
-          <span class="muted small">Most common question layouts work</span>
+          <input type="file" id="upload" accept=".txt,.docx" multiple class="sr-only">
+          <label for="upload" class="btn secondary">Upload files</label>
+          <input type="file" id="upload-dir" webkitdirectory class="sr-only">
+          <label for="upload-dir" class="btn secondary">Upload folder</label>
         </div>
+        <p class="small muted" id="upload-hint">.txt or .docx. Each file becomes a question set; most common question layouts work.</p>
         <p class="small muted" id="upload-msg" role="status"></p>
-        <a class="small" id="upload-dl" hidden>Download formatted .txt</a>
       </div>
       <fieldset class="options-set">
         <legend class="label">Options</legend>
@@ -312,12 +315,14 @@
 
 <script>
 const $ = id => document.getElementById(id);
-const UPLOAD = "\0upload"; // option value for the uploaded file, can't clash with a real filename
+const UPLOAD = "\0upload:"; // option value prefix for uploaded sets, can't clash with a real filename
 const HIST_KEY = "mc-history", LETTERS = "ABCDE";
 // queue can hold a question more than once (missed ones come back); results keeps the first try per question id
 let current = [], queue = [], i = 0, results = new Map(), picked = null, locked = false, lastWrong = [];
 let start = 0, isRetry = false, exam = false, learn = false, timerId = 0;
-let setName = "", uploaded = [], uploadedName = "";
+let setName = "", uploads = new Map(); // uploaded set name -> questions
+
+const nameOf = value => value.startsWith(UPLOAD) ? value.slice(UPLOAD.length) : value;
 
 const optionText = (q, letter) => (q.options || []).find(o => o[0] === letter) || letter;
 
@@ -351,7 +356,7 @@ function saveHistory(entry) {
 const pct = e => Math.round((e.correct / e.total) * 100);
 
 function showLastScore() {
-  const h = loadHistory()[$("file").value === UPLOAD ? uploadedName : $("file").value] || [];
+  const h = loadHistory()[nameOf($("file").value)] || [];
   $("last-score").textContent = h.length
     ? `Last: ${h[0].correct}/${h[0].total} · Best: ${Math.max(...h.map(pct))}% · ${h.length} ${h.length === 1 ? "attempt" : "attempts"}`
     : "";
@@ -359,7 +364,7 @@ function showLastScore() {
 
 async function loadFiles() {
   const files = await (await fetch("/api/files")).json();
-  $("file").replaceChildren(...files.map(f => new Option(f, f)));
+  $("builtin").replaceChildren(...files.map(f => new Option(f, f)));
   showLastScore();
 }
 
@@ -494,39 +499,69 @@ function finish() {
 
 $("start").onclick = async () => {
   if (!$("file").value) return;
-  const isUpload = $("file").value === UPLOAD;
-  setName = isUpload ? uploadedName : $("file").value;
-  let list = isUpload ? uploaded : await (await fetch("/api/files/" + encodeURIComponent($("file").value))).json();
+  const value = $("file").value;
+  setName = nameOf(value);
+  let list = value.startsWith(UPLOAD) ? uploads.get(setName) : await (await fetch("/api/files/" + encodeURIComponent(value))).json();
   list = list.map((q, id) => ({ ...q, id }));
   if ($("shuffle").checked) shuffle(list);
   if ($("shuffle-opts").checked) list = list.map(shuffleOptions);
   if (list.length) run(list, false);
 };
-$("upload").onchange = async () => {
-  const file = $("upload").files[0];
-  if (!file) return;
-  $("upload").value = ""; // allow picking the same file again
-  const res = await fetch("/api/parse", { method: "POST", body: file });
-  const { questions: list, skipped } = res.ok ? await res.json() : { questions: [], skipped: 0 };
-  const skippedNote = skipped ? ` Skipped ${skipped} without a clear answer.` : "";
-  $("upload-msg").textContent = res.ok
-    ? (list.length ? `Loaded ${list.length} questions from ${file.name}.${skippedNote}` : `No questions found in ${file.name}.${skippedNote} Check the format (see Questions.txt).`)
-    : `Upload failed: ${await res.text()}`;
-  [...$("file").options].find(o => o.value === UPLOAD)?.remove();
+// one request per file: keeps each request under the host's body size limit
+async function uploadFiles(files) {
+  files = files.filter(f => /\.(txt|docx)$/i.test(f.name));
+  if (!files.length) {
+    $("upload-msg").textContent = "No .txt or .docx files found.";
+    return;
+  }
+  $("upload-msg").textContent = `Reading ${files.length} ${files.length === 1 ? "file" : "files"}…`;
+  const lines = [];
+  let first = "";
+  for (const file of files) {
+    const name = file.webkitRelativePath || file.name; // folder path keeps same-named files in subfolders apart
+    try {
+      const res = await fetch("/api/parse", { method: "POST", body: file });
+      if (!res.ok) { lines.push(`${name}: failed (${await res.text()})`); continue; }
+      const { questions, skipped } = await res.json();
+      const note = skipped ? `, skipped ${skipped} without a clear answer` : "";
+      if (!questions.length) { lines.push(`${name}: no questions found${note}`); continue; }
+      lines.push(`${name}: ${questions.length} ${questions.length === 1 ? "question" : "questions"}${note}`);
+      uploads.set(name, questions);
+      if (![...$("file").options].some(o => o.value === UPLOAD + name)) {
+        let group = $("uploaded");
+        if (!group) $("file").prepend(group = Object.assign(document.createElement("optgroup"), { id: "uploaded", label: "Uploaded" }));
+        group.append(new Option(name, UPLOAD + name));
+      }
+      first ||= UPLOAD + name;
+    } catch {
+      lines.push(`${name}: failed (network error)`);
+    }
+  }
+  $("upload-msg").textContent = lines.join("\n");
+  if (first) $("file").value = first;
+  onSetChange();
+}
+
+function onSetChange() {
+  showLastScore();
+  const value = $("file").value, list = value.startsWith(UPLOAD) && uploads.get(nameOf(value));
   URL.revokeObjectURL($("upload-dl").href);
-  $("upload-dl").hidden = !list.length;
-  if (!list.length) return showLastScore();
+  $("upload-dl").hidden = !list;
+  if (!list) return;
   // same layout as Questions.txt, so the file also works in the legacy terminal app
   const txt = list.map(q => [q.question, ...q.options, q.answer].join("\n")).join("\n\n") + "\n";
   $("upload-dl").href = URL.createObjectURL(new Blob([txt], { type: "text/plain;charset=utf-8" }));
-  $("upload-dl").download = file.name.replace(/\.(txt|docx)$/i, "") + "-formatted.txt";
-  uploaded = list;
-  uploadedName = file.name;
-  $("file").add(new Option(`${file.name} (uploaded)`, UPLOAD), 0);
-  $("file").value = UPLOAD;
-  showLastScore();
-};
-$("file").onchange = showLastScore;
+  $("upload-dl").download = nameOf(value).split("/").pop().replace(/\.(txt|docx)$/i, "") + "-formatted.txt";
+}
+
+for (const id of ["upload", "upload-dir"]) {
+  $(id).onchange = () => {
+    const files = [...$(id).files];
+    $(id).value = ""; // allow picking the same files again
+    if (files.length) uploadFiles(files);
+  };
+}
+$("file").onchange = onSetChange;
 $("exam").onchange = () => { $("learn").disabled = $("exam").checked; };
 $("exam").onchange(); // browsers may restore the checkbox on reload
 $("next").onclick = next;
