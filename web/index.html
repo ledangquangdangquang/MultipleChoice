@@ -11,6 +11,7 @@
   /* Hallmark · genre: playful (soft end) · macrostructure: n/a (app screens) · theme: Coral, accent re-hued to indigo
    * tone: soft · audience: students revising for exams · use: review results + wrong answers
    * enrichment: none · nav: none · footer: Ft2 inline · anchor hue: 278
+   * card: liquid glass (user request)
    * pre-emit critique: P4 H5 E4 S4 R5 V4 */
   :root {
     --color-paper: oklch(97.5% 0.006 70);
@@ -29,6 +30,10 @@
     --color-bad-soft: oklch(95.5% 0.030 25);
     --color-focus: oklch(52% 0.13 278);
     --shadow-card: 0 1px 2px oklch(24% 0.015 270 / 0.05), 0 12px 32px -18px oklch(24% 0.015 270 / 0.18);
+    --glass-fill: oklch(99% 0.004 70 / 0.55);
+    --glass-inner: oklch(99% 0.004 70 / 0.45);
+    --glass-edge: oklch(100% 0 0 / 0.65);
+    --glass-sheen: oklch(100% 0 0 / 0.45);
 
     --font-body: "Be Vietnam Pro", system-ui, sans-serif;
     --text-sm: 0.875rem; --text-base: 1rem; --text-lg: 1.1875rem; --text-xl: 1.5rem;
@@ -56,6 +61,10 @@
       --color-bad-soft: oklch(30% 0.060 25);
       --color-focus: oklch(76% 0.11 278);
       --shadow-card: 0 1px 2px oklch(0% 0 0 / 0.3), 0 12px 32px -18px oklch(0% 0 0 / 0.5);
+      --glass-fill: oklch(24% 0.014 270 / 0.55);
+      --glass-inner: oklch(30% 0.014 270 / 0.4);
+      --glass-edge: oklch(100% 0 0 / 0.18);
+      --glass-sheen: oklch(100% 0 0 / 0.08);
     }
   }
 
@@ -91,8 +100,13 @@
   .small { font-size: var(--text-sm); }
   :focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
 
-  .card { background: var(--color-surface); border-radius: var(--radius-card); box-shadow: var(--shadow-card);
-          padding: var(--space-xl); }
+  /* liquid glass: frosted, saturated backdrop + bright rim + diagonal sheen */
+  .card { position: relative; isolation: isolate; padding: var(--space-xl); border-radius: 28px;
+          background: var(--glass-fill); border: 1px solid var(--glass-edge);
+          -webkit-backdrop-filter: blur(28px) saturate(170%); backdrop-filter: blur(28px) saturate(170%);
+          box-shadow: inset 0 1px 0 var(--glass-edge), inset 0 -1px 1px oklch(100% 0 0 / 0.08), var(--shadow-card); }
+  .card::before { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; pointer-events: none;
+                  background: linear-gradient(135deg, var(--glass-sheen), transparent 40% 70%, oklch(100% 0 0 / 0.06)); }
   @media (max-width: 480px) { .card { padding: var(--space-lg) var(--space-md); } }
 
   /* buttons */
@@ -114,14 +128,14 @@
   .field { margin-top: var(--space-lg); }
   .field > label, .label { display: block; font-weight: 500; margin-bottom: var(--space-sm); }
   select { width: 100%; padding: 10px 12px; border: 1px solid var(--color-rule); border-radius: var(--radius-input);
-           background: var(--color-paper); }
+           background: var(--glass-inner); }
   select:hover { border-color: var(--color-ink-2); }
   .upload { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm) var(--space-md); }
   .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   #upload:focus-visible + label, #upload-dir:focus-visible + label { outline: 2px solid var(--color-focus); outline-offset: 3px; }
   #upload-hint { margin-top: var(--space-sm); }
   .check { display: flex; align-items: center; gap: var(--space-sm); margin-top: var(--space-lg); cursor: pointer; }
-  .check input { width: 18px; height: 18px; margin: 0; accent-color: var(--color-accent); }
+  .check input { flex: none; width: 18px; height: 18px; margin: 0; accent-color: var(--color-accent); }
   #upload-msg:empty { display: none; }
   #upload-msg { margin-top: var(--space-sm); white-space: pre-line; }
   #upload-dl { display: inline-block; margin-top: var(--space-xs); color: var(--color-accent); font-weight: 500; }
@@ -149,7 +163,7 @@
   .options { display: grid; gap: var(--space-sm); }
   .option { display: flex; align-items: flex-start; gap: var(--space-md); width: 100%; text-align: left;
             padding: 12px 14px; border: 1px solid var(--color-rule); border-radius: var(--radius-card);
-            background: var(--color-surface); cursor: pointer; overflow-wrap: anywhere;
+            background: var(--glass-inner); cursor: pointer; overflow-wrap: anywhere;
             transition: border-color var(--dur-fast) var(--ease-out), background-color var(--dur-fast) var(--ease-out); }
   .option:hover:not(:disabled) { border-color: var(--color-accent); background: var(--color-accent-soft); }
   .option:disabled { cursor: default; }
@@ -164,7 +178,7 @@
   .option.picked { border-color: var(--color-accent); background: var(--color-accent-soft); }
   .option.picked .letter { background: var(--color-accent); color: var(--color-on-accent); }
   .feedback { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-md);
-              margin-top: var(--space-lg); padding: var(--space-md); border-radius: var(--radius-card); background: var(--color-paper-2); }
+              margin-top: var(--space-lg); padding: var(--space-md); border-radius: var(--radius-card); background: var(--glass-inner); }
   .feedback.ok { background: var(--color-ok-soft); }
   .feedback.bad { background: var(--color-bad-soft); }
   .feedback p { font-weight: 600; }
@@ -173,7 +187,7 @@
   .hint { margin-top: var(--space-lg); }
   @media (hover: none) { .hint { display: none; } }
   kbd { font: inherit; font-size: 0.8em; padding: 1px 6px; border: 1px solid var(--color-rule); border-bottom-width: 2px;
-        border-radius: 4px; background: var(--color-paper); }
+        border-radius: 4px; background: var(--glass-inner); }
 
   /* result */
   .score { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-sm) var(--space-md); }
@@ -190,7 +204,7 @@
   .legend .c-bad { color: var(--color-bad); }
   .review { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-md); }
   .review li { padding: var(--space-md) var(--space-lg); border: 1px solid var(--color-rule); border-radius: var(--radius-card);
-               background: var(--color-surface); overflow-wrap: anywhere; }
+               background: var(--glass-inner); overflow-wrap: anywhere; }
   .review .q { font-weight: 600; margin-bottom: var(--space-sm); }
   .review .yours, .review .right { display: flex; gap: var(--space-sm); font-size: var(--text-sm); margin-top: var(--space-xs); }
   .review .yours { color: var(--color-bad); }
@@ -207,6 +221,10 @@
 
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { transition-duration: 0ms !important; }
+  }
+  @media (prefers-reduced-transparency: reduce) {
+    :root { --glass-fill: var(--color-surface); --glass-inner: var(--color-surface); }
+    .card { -webkit-backdrop-filter: none; backdrop-filter: none; }
   }
 </style>
 </head>
