@@ -139,6 +139,19 @@
   #upload-msg:empty { display: none; }
   #upload-msg { margin-top: var(--space-sm); white-space: pre-line; }
   #upload-dl { display: inline-block; margin-top: var(--space-xs); color: var(--color-accent); font-weight: 500; }
+  .guide { margin-top: var(--space-lg); border: 1px solid var(--color-rule); border-radius: var(--radius-card);
+           background: var(--glass-inner); }
+  .guide summary { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px;
+                   font-weight: 500; cursor: pointer; list-style: none; border-radius: inherit; }
+  .guide summary::-webkit-details-marker { display: none; }
+  .guide summary::after { content: "▾"; color: var(--color-ink-2); transition: transform var(--dur-fast) var(--ease-out); }
+  .guide[open] summary::after { transform: rotate(180deg); }
+  .guide-body { padding: 0 14px 14px; font-size: var(--text-sm); overflow-wrap: anywhere; }
+  .guide ul { margin: 0; padding-left: 18px; display: grid; gap: var(--space-sm); }
+  .guide b { font-weight: 600; }
+  .guide code { font-size: 0.95em; padding: 0 4px; border-radius: 4px; background: var(--color-paper-2); }
+  .guide pre { margin: var(--space-sm) 0; padding: 10px 12px; border-radius: var(--radius-input); background: var(--color-paper-2);
+               font: inherit; white-space: pre-wrap; }
   #last-score { margin-top: var(--space-sm); }
   #last-score:empty { display: none; }
   .options-set { border: 0; padding: 0; margin: var(--space-lg) 0 0; min-width: 0; }
@@ -253,6 +266,26 @@
       <p class="brand">Multiple<span>.</span>Choice</p>
       <h1>Practice a question set</h1>
       <p class="muted">Answer every question, then review the ones you missed.</p>
+
+      <details class="guide">
+        <summary>How to use</summary>
+        <div class="guide-body">
+          <ul>
+            <li>Pick a <b>question set</b>, or upload your own: several <code>.txt</code> / <code>.docx</code> files or a whole folder. Each file becomes its own set.</li>
+            <li>A file looks like this:
+              <pre>Câu 1: Thủ đô của Việt Nam là?
+A. Huế
+B. Hà Nội
+C. Đà Nẵng
+Đáp án: B</pre>
+              Also fine: <code>1.</code> or <code>1)</code> numbering, <code>a)</code> or <code>(A)</code> options, a <code>*</code> before the correct option, or an answer key at the end (<code>Đáp án:</code> then <code>1-B, 2-A, …</code>). In Word, type the numbers yourself: automatic numbering isn't read.</li>
+            <li><b>Options</b>: shuffle questions or answers, bring missed questions back until you get them right, or grade only at the end.</li>
+            <li>Answer with a click or <kbd>A</kbd>–<kbd>E</kbd> / <kbd>1</kbd>–<kbd>5</kbd>, then <kbd>Enter</kbd> for the next question. <b>End</b> stops early.</li>
+            <li>The result screen lists every wrong answer with the correct one, lets you retry them once, and keeps your score history for each set in this browser.</li>
+            <li>The image button at the top right sets a background picture.</li>
+          </ul>
+        </div>
+      </details>
 
       <div class="field">
         <label for="file">Question set</label>
