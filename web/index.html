@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multiple Choice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Hallmark · genre: playful (soft end) · macrostructure: n/a (app screens) · theme: Coral, accent re-hued to indigo
+   * tone: soft · audience: students revising for exams · use: review results + wrong answers
+   * enrichment: none · nav: none · footer: Ft2 inline · anchor hue: 278
+   * pre-emit critique: P4 H5 E4 S4 R5 V4 */
+  :root {
+    --color-paper: oklch(97.5% 0.006 70);
+    --color-surface: oklch(99.5% 0.003 70);
+    --color-paper-2: oklch(94.5% 0.008 70);
+    --color-rule: oklch(89% 0.010 70);
+    --color-ink: oklch(24% 0.015 270);
+    --color-ink-2: oklch(47% 0.015 270);
+    --color-accent: oklch(52% 0.13 278);
+    --color-accent-hover: oklch(46% 0.14 278);
+    --color-accent-soft: oklch(94% 0.035 278);
+    --color-on-accent: oklch(99% 0.005 278);
+    --color-ok: oklch(50% 0.11 155);
+    --color-ok-soft: oklch(95% 0.040 155);
+    --color-bad: oklch(54% 0.15 25);
+    --color-bad-soft: oklch(95.5% 0.030 25);
+    --color-focus: oklch(52% 0.13 278);
+    --shadow-card: 0 1px 2px oklch(24% 0.015 270 / 0.05), 0 12px 32px -18px oklch(24% 0.015 270 / 0.18);
+
+    --font-body: "Be Vietnam Pro", system-ui, sans-serif;
+    --text-sm: 0.875rem; --text-base: 1rem; --text-lg: 1.1875rem; --text-xl: 1.5rem;
+    --text-display: clamp(3rem, 9vw + 1rem, 5rem);
+    --space-xs: 4px; --space-sm: 8px; --space-md: 16px; --space-lg: 24px; --space-xl: 32px; --space-2xl: 48px;
+    --radius-card: 12px; --radius-input: 8px; --radius-pill: 999px;
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --dur-fast: 140ms; --dur-base: 320ms;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-paper: oklch(19% 0.012 270);
+      --color-surface: oklch(23% 0.014 270);
+      --color-paper-2: oklch(27% 0.014 270);
+      --color-rule: oklch(33% 0.015 270);
+      --color-ink: oklch(93% 0.008 270);
+      --color-ink-2: oklch(72% 0.012 270);
+      --color-accent: oklch(76% 0.11 278);
+      --color-accent-hover: oklch(82% 0.10 278);
+      --color-accent-soft: oklch(31% 0.060 278);
+      --color-on-accent: oklch(20% 0.020 278);
+      --color-ok: oklch(78% 0.12 155);
+      --color-ok-soft: oklch(29% 0.050 155);
+      --color-bad: oklch(75% 0.13 25);
+      --color-bad-soft: oklch(30% 0.060 25);
+      --color-focus: oklch(76% 0.11 278);
+      --shadow-card: 0 1px 2px oklch(0% 0 0 / 0.3), 0 12px 32px -18px oklch(0% 0 0 / 0.5);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html, body { overflow-x: clip; }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 64px var(--space-md);
+         background: var(--color-paper); color: var(--color-ink);
+         font: 400 var(--text-base)/1.6 var(--font-body); font-variant-numeric: tabular-nums; }
+  .shell { width: 100%; max-width: 680px; }
+
+  /* background image: inset past the viewport so blur doesn't fade the edges */
+  #bg { position: fixed; inset: -60px; z-index: -1; background: center / cover no-repeat; pointer-events: none; }
+  .icon-btn { position: fixed; top: 12px; right: 12px; display: grid; place-items: center; width: 44px; height: 44px;
+              padding: 0; border: 1px solid var(--color-rule); border-radius: var(--radius-pill); cursor: pointer;
+              background: var(--color-surface); color: var(--color-ink); box-shadow: var(--shadow-card);
+              transition: background-color var(--dur-fast) var(--ease-out); }
+  .icon-btn:hover { background: var(--color-paper-2); }
+  #bg-panel { position: fixed; inset: 64px 12px auto auto; margin: 0; width: min(320px, calc(100vw - 24px));
+              padding: var(--space-lg); border: 1px solid var(--color-rule); border-radius: var(--radius-card);
+              background: var(--color-surface); color: var(--color-ink); box-shadow: var(--shadow-card); }
+  #bg-panel h2 { margin: 0 0 var(--space-md); font-size: var(--text-base); }
+  .range { margin-top: var(--space-md); }
+  .range label { display: flex; justify-content: space-between; font-size: var(--text-sm); font-weight: 500; }
+  .range input { width: 100%; margin: var(--space-xs) 0 0; accent-color: var(--color-accent); }
+  .range input:disabled { opacity: 0.4; }
+  #bg-msg:empty { display: none; }
+  [hidden] { display: none !important; }
+  h1, h2 { font-weight: 600; letter-spacing: -0.02em; line-height: 1.2; overflow-wrap: anywhere; min-width: 0; }
+  h1 { margin: 0 0 var(--space-sm); font-size: var(--text-xl); }
+  h2 { margin: var(--space-2xl) 0 var(--space-md); font-size: var(--text-lg); }
+  p { margin: 0; }
+  .muted { color: var(--color-ink-2); }
+  .small { font-size: var(--text-sm); }
+  :focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+
+  .card { background: var(--color-surface); border-radius: var(--radius-card); box-shadow: var(--shadow-card);
+          padding: var(--space-xl); }
+  @media (max-width: 480px) { .card { padding: var(--space-lg) var(--space-md); } }
+
+  /* buttons */
+  button, select { font: inherit; color: inherit; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-sm);
+         padding: 10px 20px; border: 1px solid transparent; border-radius: var(--radius-pill); white-space: nowrap;
+         font-weight: 600; cursor: pointer; background: var(--color-accent); color: var(--color-on-accent);
+         transition: background-color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out); }
+  .btn:hover { background: var(--color-accent-hover); }
+  .btn:active { transform: translateY(1px); }
+  .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+  .btn.secondary { background: transparent; color: var(--color-ink); border-color: var(--color-rule); }
+  .btn.secondary:hover { background: var(--color-paper-2); }
+  .actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-lg); }
+
+  /* menu */
+  .brand { font-weight: 600; letter-spacing: -0.01em; margin-bottom: var(--space-xl); }
+  .brand span { color: var(--color-accent); }
+  .field { margin-top: var(--space-lg); }
+  .field > label, .label { display: block; font-weight: 500; margin-bottom: var(--space-sm); }
+  select { width: 100%; padding: 10px 12px; border: 1px solid var(--color-rule); border-radius: var(--radius-input);
+           background: var(--color-paper); }
+  select:hover { border-color: var(--color-ink-2); }
+  .upload { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm) var(--space-md); }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  #upload:focus-visible + label { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+  .check { display: flex; align-items: center; gap: var(--space-sm); margin-top: var(--space-lg); cursor: pointer; }
+  .check input { width: 18px; height: 18px; margin: 0; accent-color: var(--color-accent); }
+  #upload-msg:empty { display: none; }
+  #upload-msg { margin-top: var(--space-sm); }
+  #upload-dl { display: inline-block; margin-top: var(--space-xs); color: var(--color-accent); font-weight: 500; }
+  #last-score { margin-top: var(--space-sm); }
+  #last-score:empty { display: none; }
+  .options-set { border: 0; padding: 0; margin: var(--space-lg) 0 0; min-width: 0; }
+  .options-set legend { padding: 0; }
+  .options-set .check { margin-top: var(--space-sm); }
+  .check:has(input:disabled) { opacity: 0.5; cursor: not-allowed; }
+
+  /* quiz */
+  .quiz-top { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-md); }
+  .counter { font-weight: 600; }
+  .quiz-top-right { display: flex; align-items: baseline; gap: var(--space-md); }
+  .timer { font-weight: 600; }
+  .link-btn { padding: 0; border: 0; background: none; color: var(--color-ink-2); font-size: var(--text-sm); cursor: pointer;
+              text-decoration: underline; text-underline-offset: 3px; }
+  .link-btn:hover { color: var(--color-ink); }
+  .tag { font-size: var(--text-sm); padding: 2px 10px; border-radius: var(--radius-pill);
+         background: var(--color-accent-soft); color: var(--color-accent); white-space: nowrap; }
+  .bar { height: 6px; background: var(--color-paper-2); border-radius: var(--radius-pill); margin: var(--space-sm) 0 var(--space-xl); overflow: hidden; }
+  .bar > div { height: 100%; background: var(--color-accent); border-radius: inherit; transform-origin: left;
+               transform: scaleX(0); transition: transform var(--dur-base) var(--ease-out); }
+  .question { font-size: var(--text-lg); font-weight: 600; line-height: 1.45; margin-bottom: var(--space-lg); overflow-wrap: anywhere; }
+  .options { display: grid; gap: var(--space-sm); }
+  .option { display: flex; align-items: flex-start; gap: var(--space-md); width: 100%; text-align: left;
+            padding: 12px 14px; border: 1px solid var(--color-rule); border-radius: var(--radius-card);
+            background: var(--color-surface); cursor: pointer; overflow-wrap: anywhere;
+            transition: border-color var(--dur-fast) var(--ease-out), background-color var(--dur-fast) var(--ease-out); }
+  .option:hover:not(:disabled) { border-color: var(--color-accent); background: var(--color-accent-soft); }
+  .option:disabled { cursor: default; }
+  .option:disabled:not(.ok):not(.bad) { opacity: 0.6; }
+  .letter { flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: var(--radius-pill);
+            background: var(--color-paper-2); font-size: var(--text-sm); font-weight: 600; }
+  .option > span:last-child { padding-top: 2px; }
+  .option.ok { border-color: var(--color-ok); background: var(--color-ok-soft); }
+  .option.ok .letter { background: var(--color-ok); color: var(--color-surface); }
+  .option.bad { border-color: var(--color-bad); background: var(--color-bad-soft); }
+  .option.bad .letter { background: var(--color-bad); color: var(--color-surface); }
+  .option.picked { border-color: var(--color-accent); background: var(--color-accent-soft); }
+  .option.picked .letter { background: var(--color-accent); color: var(--color-on-accent); }
+  .feedback { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-md);
+              margin-top: var(--space-lg); padding: var(--space-md); border-radius: var(--radius-card); background: var(--color-paper-2); }
+  .feedback.ok { background: var(--color-ok-soft); }
+  .feedback.bad { background: var(--color-bad-soft); }
+  .feedback p { font-weight: 600; }
+  .feedback.ok p { color: var(--color-ok); }
+  .feedback.bad p { color: var(--color-bad); }
+  .hint { margin-top: var(--space-lg); }
+  @media (hover: none) { .hint { display: none; } }
+  kbd { font: inherit; font-size: 0.8em; padding: 1px 6px; border: 1px solid var(--color-rule); border-bottom-width: 2px;
+        border-radius: 4px; background: var(--color-paper); }
+
+  /* result */
+  .score { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-sm) var(--space-md); }
+  .score-num { font-size: var(--text-display); font-weight: 700; letter-spacing: -0.04em; line-height: 1; }
+  .score-num small { font-size: 0.45em; color: var(--color-ink-2); font-weight: 500; letter-spacing: -0.02em; }
+  .score-pct { font-size: var(--text-xl); font-weight: 600; color: var(--color-accent); }
+  .split { display: flex; height: 10px; gap: 3px; margin: var(--space-lg) 0 var(--space-sm); }
+  .split > div { border-radius: var(--radius-pill); min-width: 0; }
+  .split .ok { background: var(--color-ok); }
+  .split .bad { background: var(--color-bad); }
+  .legend { display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-lg); }
+  .legend b { font-weight: 600; }
+  .legend .c-ok { color: var(--color-ok); }
+  .legend .c-bad { color: var(--color-bad); }
+  .review { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-md); }
+  .review li { padding: var(--space-md) var(--space-lg); border: 1px solid var(--color-rule); border-radius: var(--radius-card);
+               background: var(--color-surface); overflow-wrap: anywhere; }
+  .review .q { font-weight: 600; margin-bottom: var(--space-sm); }
+  .review .yours, .review .right { display: flex; gap: var(--space-sm); font-size: var(--text-sm); margin-top: var(--space-xs); }
+  .review .yours { color: var(--color-bad); }
+  .review .right { color: var(--color-ok); font-weight: 500; }
+  .review .yours::before { content: "✕"; flex: none; }
+  .review .right::before { content: "✓"; flex: none; }
+  .history { list-style: none; margin: 0; padding: 0; font-size: var(--text-sm); }
+  .history li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-xs) var(--space-md);
+                padding: var(--space-sm) 0; border-bottom: 1px solid var(--color-rule); }
+  .history b { font-weight: 600; }
+  .empty { padding: var(--space-lg); border-radius: var(--radius-card); background: var(--color-ok-soft); color: var(--color-ok); font-weight: 500; }
+
+  footer { margin-top: var(--space-xl); padding-top: var(--space-md); border-top: 1px solid var(--color-rule); }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition-duration: 0ms !important; }
+  }
+</style>
+</head>
+<body>
+<div id="bg" hidden></div>
+<button class="icon-btn" popovertarget="bg-panel" aria-label="Background settings" title="Background">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-4.5-4.5L5 21"/>
+  </svg>
+</button>
+<div id="bg-panel" popover>
+  <h2>Background</h2>
+  <div class="upload">
+    <input type="file" id="bg-upload" accept="image/*" class="sr-only">
+    <label for="bg-upload" class="btn secondary">Upload image</label>
+    <button class="btn secondary" id="bg-remove">Remove</button>
+  </div>
+  <p class="small muted" id="bg-msg" role="status"></p>
+  <div class="range"><label for="bg-blur">Blur <output id="bg-blur-val"></output></label><input type="range" id="bg-blur" min="0" max="30"></div>
+  <div class="range"><label for="bg-opacity">Opacity <output id="bg-opacity-val"></output></label><input type="range" id="bg-opacity" min="0" max="100"></div>
+  <div class="range"><label for="bg-bright">Brightness <output id="bg-bright-val"></output></label><input type="range" id="bg-bright" min="20" max="150"></div>
+</div>
+<div class="shell">
+  <main class="card">
+    <section id="menu">
+      <p class="brand">Multiple<span>.</span>Choice</p>
+      <h1>Practice a question set</h1>
+      <p class="muted">Answer every question, then review the ones you missed.</p>
+
+      <div class="field">
+        <label for="file">Question set</label>
+        <select id="file"></select>
+        <p class="small muted" id="last-score"></p>
+      </div>
+      <div class="field">
+        <span class="label">Or use your own file</span>
+        <div class="upload">
+          <input type="file" id="upload" accept=".txt,.docx" class="sr-only">
+          <label for="upload" class="btn secondary">Upload .txt / .docx</label>
+          <span class="muted small">Most common question layouts work</span>
+        </div>
+        <p class="small muted" id="upload-msg" role="status"></p>
+        <a class="small" id="upload-dl" hidden>Download formatted .txt</a>
+      </div>
+      <fieldset class="options-set">
+        <legend class="label">Options</legend>
+        <label class="check"><input type="checkbox" id="shuffle"> Shuffle the questions</label>
+        <label class="check"><input type="checkbox" id="shuffle-opts"> Shuffle the answers</label>
+        <label class="check"><input type="checkbox" id="learn"> Missed questions come back until you get them right</label>
+        <label class="check"><input type="checkbox" id="exam"> Grade at the end (no feedback per question)</label>
+      </fieldset>
+      <div class="actions"><button class="btn" id="start">Start practice</button></div>
+    </section>
+
+    <section id="quiz" hidden>
+      <div class="quiz-top">
+        <span class="counter" id="counter"></span>
+        <span class="quiz-top-right">
+          <span class="tag" id="tag" hidden></span>
+          <span class="timer" id="timer" role="timer"></span>
+          <button class="link-btn" id="end">End</button>
+        </span>
+      </div>
+      <div class="bar"><div id="progress"></div></div>
+      <div class="question" id="question"></div>
+      <div class="options" id="options"></div>
+      <div class="feedback" id="feedback" hidden>
+        <p id="feedback-text" role="status"></p>
+        <button class="btn" id="next">Next</button>
+      </div>
+      <p class="hint small muted">Press <kbd>A</kbd>–<kbd>E</kbd> or <kbd>1</kbd>–<kbd>5</kbd> to answer, <kbd>Enter</kbd> to continue.</p>
+    </section>
+
+    <section id="result" hidden>
+      <p class="muted" id="result-label"></p>
+      <div class="score">
+        <span class="score-num" id="score"></span>
+        <span class="score-pct" id="pct"></span>
+      </div>
+      <div class="split" aria-hidden="true"><div class="ok" id="split-ok"></div><div class="bad" id="split-bad"></div></div>
+      <p class="legend small">
+        <span class="c-ok"><b id="n-ok"></b> correct</span>
+        <span class="c-bad"><b id="n-bad"></b> wrong</span>
+        <span class="muted" id="time"></span>
+      </p>
+
+      <h2 id="review-title"></h2>
+      <ol class="review" id="wrong-list"></ol>
+      <p class="empty" id="no-wrong" hidden>No mistakes this round. Nothing to review.</p>
+
+      <div id="history-box" hidden>
+        <h2>History for this set</h2>
+        <ol class="history" id="history"></ol>
+      </div>
+
+      <div class="actions">
+        <button class="btn" id="retry" hidden>Retry wrong questions</button>
+        <button class="btn secondary" id="home">Back to menu</button>
+      </div>
+    </section>
+  </main>
+  <footer class="small muted">© 2025 by ledangquangdangquang.</footer>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const UPLOAD = "\0upload"; // option value for the uploaded file, can't clash with a real filename
+const HIST_KEY = "mc-history", LETTERS = "ABCDE";
+// queue can hold a question more than once (missed ones come back); results keeps the first try per question id
+let current = [], queue = [], i = 0, results = new Map(), picked = null, locked = false, lastWrong = [];
+let start = 0, isRetry = false, exam = false, learn = false, timerId = 0;
+let setName = "", uploaded = [], uploadedName = "";
+
+const optionText = (q, letter) => (q.options || []).find(o => o[0] === letter) || letter;
+
+function shuffle(list) {
+  for (let k = list.length - 1; k > 0; k--) {
+    const j = Math.floor(Math.random() * (k + 1));
+    [list[k], list[j]] = [list[j], list[k]];
+  }
+  return list;
+}
+
+// re-letter options after shuffling so A is always first on screen
+function shuffleOptions(q) {
+  const opts = shuffle(q.options.map(o => ({ letter: o[0], text: o.slice(2).trim() })));
+  return { ...q, options: opts.map((o, k) => `${LETTERS[k]}. ${o.text}`), answer: LETTERS[opts.findIndex(o => o.letter === q.answer)] };
+}
+
+function show(id) {
+  for (const s of ["menu", "quiz", "result"]) $(s).hidden = s !== id;
+}
+
+// score history: { [set name]: [newest attempt, ...] }, kept in this browser only
+function loadHistory() {
+  try { return JSON.parse(localStorage.getItem(HIST_KEY)) || {}; } catch { return {}; }
+}
+function saveHistory(entry) {
+  const h = loadHistory();
+  h[setName] = [entry, ...(h[setName] || [])].slice(0, 50);
+  try { localStorage.setItem(HIST_KEY, JSON.stringify(h)); } catch {}
+}
+const pct = e => Math.round((e.correct / e.total) * 100);
+
+function showLastScore() {
+  const h = loadHistory()[$("file").value === UPLOAD ? uploadedName : $("file").value] || [];
+  $("last-score").textContent = h.length
+    ? `Last: ${h[0].correct}/${h[0].total} · Best: ${Math.max(...h.map(pct))}% · ${h.length} ${h.length === 1 ? "attempt" : "attempts"}`
+    : "";
+}
+
+async function loadFiles() {
+  const files = await (await fetch("/api/files")).json();
+  $("file").replaceChildren(...files.map(f => new Option(f, f)));
+  showLastScore();
+}
+
+function run(list, retry) {
+  current = list; queue = [...list]; i = 0; results = new Map(); isRetry = retry; start = Date.now();
+  exam = $("exam").checked;
+  learn = $("learn").checked && !exam; // a returning question would give away the answer in exam mode
+  clearInterval(timerId);
+  tick();
+  timerId = setInterval(tick, 1000);
+  show("quiz");
+  render();
+}
+
+// stopwatch: elapsed time since the round started
+function tick() {
+  const s = Math.floor((Date.now() - start) / 1000);
+  $("timer").textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+}
+
+function render() {
+  const q = queue[i], again = results.has(q.id);
+  picked = null; locked = false;
+  $("counter").textContent = `${i + 1} / ${queue.length}`;
+  $("progress").style.transform = `scaleX(${results.size / current.length})`;
+  $("tag").hidden = !(again || isRetry);
+  $("tag").textContent = again ? "Again" : "Retry round";
+  $("question").textContent = q.question;
+  $("options").replaceChildren(...(q.options || []).map(opt => {
+    const b = document.createElement("button");
+    const letter = document.createElement("span");
+    const text = document.createElement("span");
+    b.className = "option";
+    b.dataset.letter = opt[0];
+    letter.className = "letter";
+    letter.textContent = opt[0];
+    text.textContent = opt.slice(2).trim();
+    b.append(letter, text);
+    b.onclick = () => choose(opt[0]);
+    return b;
+  }));
+  $("feedback").hidden = true;
+}
+
+function choose(letter) {
+  if (locked) return;
+  if (!exam) return commit(letter);
+  // exam: just mark the pick; it can change until Next
+  picked = letter;
+  for (const b of $("options").children) b.classList.toggle("picked", b.dataset.letter === letter);
+  $("feedback-text").textContent = `Selected ${letter}`;
+  $("feedback").className = "feedback";
+  $("feedback").hidden = false;
+  $("next").textContent = i + 1 < queue.length ? "Next" : "Submit";
+}
+
+function commit(letter) {
+  locked = true;
+  const q = queue[i], ok = letter === q.answer;
+  if (!results.has(q.id)) results.set(q.id, { q, chosen: letter, ok });
+  if (learn && !ok) queue.splice(Math.min(i + 4, queue.length), 0, q); // comes back after 3 other questions
+  if (exam) return;
+  for (const b of $("options").children) {
+    b.disabled = true;
+    if (b.dataset.letter === q.answer) b.classList.add("ok");
+    else if (b.dataset.letter === letter) b.classList.add("bad");
+  }
+  $("feedback-text").textContent = ok ? "✓ Correct" : `✕ Not quite. The answer is ${q.answer}.${learn ? " It will come back." : ""}`;
+  $("feedback").className = "feedback " + (ok ? "ok" : "bad");
+  $("feedback").hidden = false;
+  $("progress").style.transform = `scaleX(${results.size / current.length})`;
+  $("next").textContent = i + 1 < queue.length ? "Next" : "See results";
+  $("next").focus();
+}
+
+function next() {
+  if (!locked) {
+    if (picked === null) return;
+    commit(picked);
+  }
+  if (++i < queue.length) render();
+  else finish();
+}
+
+function finish() {
+  clearInterval(timerId);
+  if (!locked && picked !== null) commit(picked); // exam: keep a pick made before ending early
+  // questions never answered (ended early) count as wrong
+  const res = current.map(q => results.get(q.id) || { q, chosen: null, ok: false });
+  const wrong = res.filter(r => !r.ok), total = res.length, correct = total - wrong.length;
+  const minutes = (Date.now() - start) / 60000;
+  lastWrong = wrong.map(r => r.q);
+
+  $("result-label").textContent = isRetry ? "Retry round finished" : "Your result";
+  $("score").replaceChildren(String(correct), Object.assign(document.createElement("small"), { textContent: ` / ${total}` }));
+  $("pct").textContent = `${pct({ correct, total })}%`;
+  $("split-ok").style.flex = String(correct);
+  $("split-bad").style.flex = String(wrong.length);
+  $("n-ok").textContent = correct;
+  $("n-bad").textContent = wrong.length;
+  $("time").textContent = `${minutes.toFixed(2)} min`;
+
+  $("review-title").textContent = wrong.length ? `Review ${wrong.length} wrong ${wrong.length === 1 ? "answer" : "answers"}` : "Review";
+  $("wrong-list").replaceChildren(...wrong.map(({ q, chosen }) => {
+    const li = document.createElement("li");
+    const qe = Object.assign(document.createElement("p"), { className: "q", textContent: q.question });
+    const yours = Object.assign(document.createElement("p"), { className: "yours", textContent: chosen ? `You chose ${optionText(q, chosen)}` : "Not answered" });
+    const right = Object.assign(document.createElement("p"), { className: "right", textContent: `Correct: ${optionText(q, q.answer)}` });
+    li.append(qe, yours, right);
+    return li;
+  }));
+  $("wrong-list").hidden = !wrong.length;
+  $("no-wrong").hidden = !!wrong.length;
+  // legacy rule: only one retry round
+  $("retry").hidden = isRetry || !wrong.length;
+
+  if (!isRetry) saveHistory({ date: Date.now(), correct, total, minutes, exam });
+  const h = loadHistory()[setName] || [];
+  $("history-box").hidden = !h.length;
+  $("history").replaceChildren(...h.slice(0, 10).map(e => {
+    const li = document.createElement("li");
+    const when = Object.assign(document.createElement("span"), {
+      className: "muted",
+      textContent: `${new Date(e.date).toLocaleString()} · ${e.minutes.toFixed(1)} min${e.exam ? " · graded at end" : ""}`,
+    });
+    const score = Object.assign(document.createElement("b"), { textContent: `${e.correct}/${e.total} (${pct(e)}%)` });
+    li.append(when, score);
+    return li;
+  }));
+  show("result");
+}
+
+$("start").onclick = async () => {
+  if (!$("file").value) return;
+  const isUpload = $("file").value === UPLOAD;
+  setName = isUpload ? uploadedName : $("file").value;
+  let list = isUpload ? uploaded : await (await fetch("/api/files/" + encodeURIComponent($("file").value))).json();
+  list = list.map((q, id) => ({ ...q, id }));
+  if ($("shuffle").checked) shuffle(list);
+  if ($("shuffle-opts").checked) list = list.map(shuffleOptions);
+  if (list.length) run(list, false);
+};
+$("upload").onchange = async () => {
+  const file = $("upload").files[0];
+  if (!file) return;
+  $("upload").value = ""; // allow picking the same file again
+  const res = await fetch("/api/parse", { method: "POST", body: file });
+  const { questions: list, skipped } = res.ok ? await res.json() : { questions: [], skipped: 0 };
+  const skippedNote = skipped ? ` Skipped ${skipped} without a clear answer.` : "";
+  $("upload-msg").textContent = res.ok
+    ? (list.length ? `Loaded ${list.length} questions from ${file.name}.${skippedNote}` : `No questions found in ${file.name}.${skippedNote} Check the format (see Questions.txt).`)
+    : `Upload failed: ${await res.text()}`;
+  [...$("file").options].find(o => o.value === UPLOAD)?.remove();
+  URL.revokeObjectURL($("upload-dl").href);
+  $("upload-dl").hidden = !list.length;
+  if (!list.length) return showLastScore();
+  // same layout as Questions.txt, so the file also works in the legacy terminal app
+  const txt = list.map(q => [q.question, ...q.options, q.answer].join("\n")).join("\n\n") + "\n";
+  $("upload-dl").href = URL.createObjectURL(new Blob([txt], { type: "text/plain;charset=utf-8" }));
+  $("upload-dl").download = file.name.replace(/\.(txt|docx)$/i, "") + "-formatted.txt";
+  uploaded = list;
+  uploadedName = file.name;
+  $("file").add(new Option(`${file.name} (uploaded)`, UPLOAD), 0);
+  $("file").value = UPLOAD;
+  showLastScore();
+};
+$("file").onchange = showLastScore;
+$("exam").onchange = () => { $("learn").disabled = $("exam").checked; };
+$("exam").onchange(); // browsers may restore the checkbox on reload
+$("next").onclick = next;
+$("end").onclick = () => {
+  if (confirm("End now? Unanswered questions count as wrong.")) finish();
+};
+$("retry").onclick = () => run(lastWrong, true);
+$("home").onclick = () => { show("menu"); showLastScore(); };
+
+// background: settings live in this browser only (localStorage)
+const BG_KEY = "mc-bg", BG_UNITS = { blur: "px", opacity: "%", bright: "%" };
+const bg = { image: "", blur: 0, opacity: 100, bright: 100 };
+try { Object.assign(bg, JSON.parse(localStorage.getItem(BG_KEY))); } catch {}
+
+function applyBg() {
+  $("bg").hidden = !bg.image;
+  $("bg").style.backgroundImage = bg.image ? `url("${bg.image}")` : "";
+  $("bg").style.filter = `blur(${bg.blur}px) brightness(${bg.bright}%)`;
+  $("bg").style.opacity = bg.opacity / 100;
+  for (const k in BG_UNITS) {
+    $("bg-" + k).value = bg[k];
+    $("bg-" + k).disabled = !bg.image;
+    $(`bg-${k}-val`).textContent = bg[k] + BG_UNITS[k];
+  }
+  $("bg-remove").disabled = !bg.image;
+}
+function saveBg() {
+  try {
+    localStorage.setItem(BG_KEY, JSON.stringify(bg));
+    $("bg-msg").textContent = "";
+  } catch {
+    $("bg-msg").textContent = "Image is too large to keep after reload. It works until you close the page.";
+  }
+}
+for (const k in BG_UNITS) {
+  $("bg-" + k).oninput = e => { bg[k] = Number(e.target.value); applyBg(); };
+  $("bg-" + k).onchange = saveBg; // save on release, not on every drag step
+}
+$("bg-upload").onchange = () => {
+  const file = $("bg-upload").files[0];
+  $("bg-upload").value = ""; // allow picking the same file again
+  if (!file) return;
+  if (!file.type.startsWith("image/")) { $("bg-msg").textContent = "Please choose an image file."; return; }
+  const reader = new FileReader();
+  reader.onload = () => { bg.image = reader.result; applyBg(); saveBg(); };
+  reader.readAsDataURL(file);
+};
+$("bg-remove").onclick = () => { bg.image = ""; applyBg(); saveBg(); };
+applyBg();
+
+document.addEventListener("keydown", e => {
+  if ($("quiz").hidden || e.ctrlKey || e.metaKey || e.altKey) return;
+  if (e.target.closest?.("#bg-panel")) return; // sliders use keys too
+  const k = e.key.toUpperCase();
+  if (k === "ENTER") {
+    if (locked || picked !== null) { e.preventDefault(); next(); }
+    return;
+  }
+  if (locked) return;
+  const opts = queue[i].options || [];
+  const opt = /^[1-5]$/.test(k) ? opts[k - 1] : opts.find(o => o[0] === k);
+  if (opt) choose(opt[0]);
+});
+
+loadFiles();
+</script>
+</body>
+</html>
